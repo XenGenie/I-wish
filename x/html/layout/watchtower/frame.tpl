@@ -37,7 +37,10 @@
         @media all {
             /* all devices */
              .background-clock {
-                position: fixed; font-size: 555%; color: rgba(0,0,0,0.10); bottom: 55px; right: 25px;
+                position: fixed; font-size: 350%; color: rgba(0,0,0,0.444);
+
+                top                : 30px; 
+                left               : 45px;
                 /* -- transition is the magic sauce for animation -- */
                 -webkit-transition          : all .4s ease-in-out;
                 transition                  : all .4s ease-in-out;
@@ -46,9 +49,8 @@
                 position           : fixed;
                 font-size          : 500%;
                 color              : rgba(0,0,0,0.15);
-                top                : 30px; 
-                left               : 45px;
                 z-index            : -1;
+                bottom: 55px; right: 25px;
                 -webkit-transition : all .4s ease-in-out;
                 transition         : all .4s ease-in-out;
             }
@@ -92,10 +94,10 @@
             iPad
         */
 
-        @media screen and (min-width : 768px) and (max-width : 1024px)  { 
+        @media screen and (min-width : 768px) and (max-width : 1200px)  { 
             /* all iPad models */
             .background-clock {
-                 font-size: 400%; color: rgba(0,0,0,0.10); bottom: 15px; right: 15px;
+                 font-size: 200%;  
             }
             .bg-host{
                 font-size: 400%;
@@ -112,7 +114,7 @@
         @media screen and (min-width : 568px) and (max-width : 768px) { 
             /* iPhone 5 */
             .background-clock {
-                 font-size: 300%; color: rgba(0,0,0,0.10); bottom: 15px; right: 15px;
+                 font-size: 300%;  
             }
             .bg-host{
                 font-size: 333%;
@@ -126,7 +128,7 @@
         @media screen and (min-width : 320px) and (max-width : 568px) { 
             /* iPhone 5 */
             .background-clock {
-                 font-size: 222%; color: rgba(0,0,0,0.10); bottom: 15px; right: 15px;
+                 font-size: 222%;  
             }
             .bg-host{
                 font-size: 222%;
@@ -208,6 +210,13 @@
 			} 
 			</STYLE>
 <body class="background-dark">
+
+
+<iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"></iframe>
+<small class="label tile label-sm widget " style="position: absolute; bottom: 0; left: 0; margin: 0 50px 10px 0;">super powered by<br/>  
+    <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>
+</small>
+
 <div class="logo text-center">
     <h4  class="bg-host ">
         {$HTTP_HOST} 
@@ -268,6 +277,11 @@
             {/if}
         {/foreach}
 
+        
+        <li class="visible-xs">
+            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
+        </li>
+    </ul>
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
@@ -276,82 +290,29 @@
                 data-value="auto"
                 class="btn-auto btn btn-transparent btn-sm"><i class="fa fa-toggle-right fa-1x"></i></button>
     </div> 
-        <li class="visible-xs">
-            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
-        </li>
-    </ul>
 </nav>
 <div class="wrap">
-    <header class="page-header" style="position: relative; z-index:10 ">
-        <div class="navbar" > 
-                
+    <header class="page-header">
+    <div class="navbar">
                 <ul class="nav navbar-nav navbar-right pull-right">
-                    <li class=" hidden-xs">
-                        <a href="/"  >
-                            <i class="fa fa-globe"></i>
+
+
+
+                    <li class="visible-phone-landscape">
+                        <a href="#" id="search-toggle">
+                            <i class="fa fa-search"></i>
                         </a>
                     </li>
-
-
-                    <li>
-                        <a href="#" id="settings" title="Settings" data-toggle="popover" data-placement="bottom"  ><i class="fa fa-cog"></i></a>
-                    </li>
-                    
-                    <li class="divider"></li>
-                    
-                    <li class="hidden  dropdown">
-                        <a href="#" title="Account" id="account"
-                           class="dropdown-toggle"
-                           data-toggle="dropdown">
-                            <i class="fa fa-user"></i>
-                        </a>
-                        <ul id="account-menu" class="dropdown-menu account" role="menu">
-                            <li role="presentation" class="account-picture">
-                                <!-- <img src="img/2.jpg" alt=""> -->
-                                Philip Daineka
-                            </li>
-                            <li role="presentation">
-                                <a href="form_account.html" class="link">
-                                    <i class="fa fa-user"></i>
-                                    Profile
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="component_calendar.html" class="link">
-                                    <i class="fa fa-calendar"></i>
-                                    Calendar
-                                </a>
-                            </li>
-                            <li role="presentation">
-                                <a href="#" class="link">
-                                    <i class="fa fa-inbox"></i>
-                                    Inbox
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="visible-xs">
-                        <a href="#"
-                           class="btn-navbar"
-                           data-toggle="collapse"
-                           data-target=".sidebar"
-                           title="">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </li>
-                    
-
-
-                    <li class="dropdown hidden">
+                    <li class="dropdown">
                         <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="fa fa-comments"></i>
+                            <i class="fa fa-comments-o"></i>
                         </a>
                         <ul id="messages-menu" class="dropdown-menu messages" role="menu">
                             <li role="presentation">
                                 <a href="#" class="message">
-                                    
+                                    <img src="img/1.jpg" alt="">
                                     <div class="details">
                                         <div class="sender">Jane Hew</div>
                                         <div class="text">
@@ -362,7 +323,7 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="message">
-                                     
+                                    <img src="img/2.jpg" alt="">
                                     <div class="details">
                                         <div class="sender">Alies Rumiancaŭ</div>
                                         <div class="text">
@@ -373,7 +334,7 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="message">
-                                     
+                                    <img src="img/3.jpg" alt="">
                                     <div class="details">
                                         <div class="sender">Michał Rumiancaŭ</div>
                                         <div class="text">
@@ -389,11 +350,11 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown hidden">
+                    <li class="dropdown">
                         <a href="#" title="8 support tickets"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="fa fa-group"></i>
+                            <i class="fa fa-ticket"></i>
                             <span class="count">8</span>
                         </a>
                         <ul id="support-menu" class="dropdown-menu support" role="menu">
@@ -454,38 +415,69 @@
                             </li>
                         </ul>
                     </li>
-                    <li class=" "><a href="/{$toBackDoor}/login/logout"><i class="fa fa-sign-out"></i></a></li>
+                    <li class="divider"></li>
+                    <li class="hidden-xs">
+                        <a href="#" id="settings"
+                           title="Settings"
+                           data-toggle="popover"
+                           data-placement="bottom">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs dropdown">
+                        <a href="#" title="Account" id="account"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <ul id="account-menu" class="dropdown-menu account" role="menu">
+                            <li role="presentation" class="account-picture">
+                                <img src="/users/avatar" class="img-circle" alt="">
+                                {$user.username}
+                            </li>
+                            <li role="presentation">
+                                <a href="form_account.html" class="link">
+                                    <i class="fa fa-user"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="component_calendar.html" class="link">
+                                    <i class="fa fa-calendar"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="link">
+                                    <i class="fa fa-inbox"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="#"
+                           class="btn-navbar"
+                           data-toggle="collapse"
+                           data-target=".sidebar"
+                           title="">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
 
+                    <li class="divider"></li>
+                     <li class=" hidden-xs">
+                        <a href="/" data-widgster="fullscreen" title="Full Screen" >
+                            <i class="fa fa-globe"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs"><a href="/{$toBackDoor}/login/logout"><i class="fa fa-sign-out"></i></a></li>
                 </ul>
-    
                 <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="search-query" placeholder="Search...">
                 </form>
-
-                <div class="notifications pull-right hidden">
-                     <div class="alert-warning alert pull-right hidden-xs">
-                        <a href="#" class="close" data-dismiss="alert">&times;</a>
-                        <i class='fa fa-users'></i>  <strong>11 Users Online</strong>  
-                    </div>
-                    <div class="alert-warning alert pull-right hidden-xs">
-                        <a href="#" class="close" data-dismiss="alert">&times;</a>
-                        <i class='fa fa-dashboard'></i>  <strong>{$total_used_space.left} - {$total_used_space.used} used of {$total_used_space.limit}</strong>  
-                    </div> 
-                    <div class="alert-warning alert pull-right hidden-xs">
-                        <a href="#" class="close" data-dismiss="alert">&times;</a>
-                        <i class='fa fa-exchange fa-rotate-90'></i>  <strong>{$HTTP_HOST_TOTAL_HITS}</strong>  
-                    </div> 
-                    <div class="alert-info alert pull-right hidden-xs">
-                        <a href="#" class="close" data-dismiss="alert">&times;</a>
-                        Domain {$HTTP_HOST} is now SuperCharged! Launch it on any Device!
-                                    (<i class="fa fa-mobile "></i>
-                                    <a id="notification-link" href="#"><i class="fa fa-desktop "></i></a>
-                                    <i class="fa fa-tablet "></i>) 
-                    </div>
-                </div>
         </div>
-
-    </header>
+</header> 
      
     <div class="loader-wrap hiding hide">
         <i class="loader"></i>
@@ -964,10 +956,16 @@
                 style: "css/theme-1.min.css"
             }], i = "", n = 0; n < t.length; n++) i += '<a href="#" data-color="' + t[n].color + '"  data-theme-css="' + t[n].style + '" title="' + t[n].title + '" style="display: inline-block; height: 35px;  width: 35px; margin-right: 10px;text-decoration: none!important; border: 1px solid rgba(77, 77, 77, 0.95); background-color: ' + t[n].color + '"><\/a>';
 
-            $("body").append('<a title="Show/Hide Theme Changer" class="widget" href="#" id="theme-changer" style="position: fixed;display: inline-block;top: 0px;left: 0;width: 40px;line-height: 40px; padding: 0px; border-radius: 0 3px 3px 0;color: white;z-index: 1003;text-align: center;font-size: 1.5em;text-decoration: none!important"><i class="fa fa-laptop"><\/i><\/a><div class="theme-changer-colors theme-changer-hidden widget" style="border:0px solid rgb(238, 238, 238);visibility: hidden;opacity: 0;position: fixed;top: 40px;left: -170px;width: 150px;padding: 10px;text-align: center;z-index: 1002;border-radius: 0 3px 3px 0;background-color: rgba(77, 77, 77, 0.23);-moz-transition-duration: .4s;-o-transition-duration: .4s;-webkit-transition-duration: .4s;transition-duration: .4s;">' + i + "<\/div>");
+            $("body").append('<a title="Show/Hide Theme Changer" class="widget" href="#" id="theme-changer" style="position: fixed;display: inline-block;top: 0px;left: 0;width: 40px;line-height: 40px; padding: 0px; border-radius: 0 3px 3px 0;color: white;z-index: 1003;text-align: center;font-size: 1.5em;text-decoration: none!important"><i class="fa fa-cloud"><\/i><\/a><div class="theme-changer-colors theme-changer-hidden widget" style="border:0px solid rgb(238, 238, 238);visibility: hidden;opacity: 0;position: fixed;top: 40px;left: -170px;width: 150px;padding: 10px;text-align: center;z-index: 1002;border-radius: 0 3px 3px 0;background-color: rgba(77, 77, 77, 0.23);-moz-transition-duration: .4s;-o-transition-duration: .4s;-webkit-transition-duration: .4s;transition-duration: .4s;">' + i + "<\/div>");
             
             // $("body").append('<a href="#" id="settings" title="Settings" data-toggle="popover" data-placement="bottom" style="position: fixed;display: inline-block;top: 40px;left: 0px;width: 40px;line-height: 40px; padding: 0px; border-radius: 0 3px 3px 0;color: white;z-index: 1003;text-align: center;font-size: 1.5em;text-decoration: none!important;background-color: rgba(77, 77, 77, 0.23)"><i class="fa fa-cog"><\/i><\/a>');
 
+            var btn = $('<button/>').addClass('btn btn-primary active btn-block').css({ marginBottom : '5px' }).html('<i class="fa fa-cloud"></i> Toggle Clouds').on('click',function(){
+                $('iframe').toggleClass('hidden');
+                $(this).toggleClass('active');
+            });
+
+            $('.theme-changer-colors').prepend(btn);
             
 
             $("#theme-changer").click(function() {
