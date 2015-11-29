@@ -3,7 +3,7 @@
 # read -p "Type to Install: " answer
 
 # array=(Hydrogen Carbon Nitrogen Oxygen Copper Quartz Golden-Goose-Egg Emerald)
-array=(Hydrogen $SUITE)
+array=(Hydrogen X)
 
 cd ../
 
