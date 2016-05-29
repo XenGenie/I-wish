@@ -1,194 +1,183 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		
-		<title>SuperDom: Master Watchtower</title>
-		
-        <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">   
-        <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
+  <head>
+    <meta charset="utf-8">
+    <title>
 
+    </title>
+    <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">   
+    <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
+    <link rel="stylesheet" href="/bin/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Geo|Righteous|Allerta' rel='stylesheet' type='text/css'> 
+    <link href="/x/html/layout/watchtower/css/application.min.css" rel="stylesheet">
+    {* TODO: Make a min & compress file for all css *}
+    {if $HTML.HEAD.CSS != ''}
+    <link rel="stylesheet" type="text/css" href="{$HTML.HEAD.CSS}">
+    {/if} 
+
+    {if $HTML.HEAD.JS != ''}
+    <!--
+    <script type="text/javascript" src="{$HTML.HEAD.JS}"></SCRIPT>
+    -->
+    {/IF} 
+
+    <style type="text/css"> 
+
+    @media all {
+        /* all devices */
+          .background-clock {
+            position: fixed; font-size: 350%; color: rgba(0,0,0,0.444);
+
+            top                : 30px; 
+            left               : 45px;
+            /* -- transition is the magic sauce for animation -- */
+            -webkit-transition          : all .4s ease-in-out;
+            transition                  : all .4s ease-in-out;
+        }
+        .bg-host{
+            position           : fixed;
+            font-size          : 500%;
+            color              : rgba(0,0,0,0.15);
+            z-index            : -1;
+            bottom: 55px; right: 25px;
+            -webkit-transition : all .4s ease-in-out;
+            transition         : all .4s ease-in-out;
+        }
+    } 
+    @media screen {
+        /* computer screens */
+          
+    }
+    @media print {
+        /* printers */
+    }
+    @media aural {
+        /* speech and sound synthesizers */
+    }
+    @media braille {
+        /* braille tactile feedback devices */
+    }
+    @media embossed {
+        /* paged braille printers */
+    }
+    @media handheld {
+        /* small or handheld devices */
+    }
+    @media projection {
+        /* projected presentations */
+    }
+    @media tty {
+        /* teletypes and terminals */
+    }
+    @media tv {
+        /* television-type devices */
+    }
+
+
+    @media screen and (max-width: 768px){ 
+        /* all iPad models */
         
-		
-        <link rel="stylesheet" href="/bin/css/font-awesome.css">
+    }
 
-        <link href='http://fonts.googleapis.com/css?family=Geo|Righteous|Allerta' rel='stylesheet' type='text/css'> 
-        <link rel="shortcut icon" href="img/favicon.png">
+    /*
+        iPad
+    */
 
+    @media screen and (min-width : 768px) and (max-width : 1200px)  { 
+        /* all iPad models */
+        .background-clock {
+              font-size: 200%;  
+        }
+        .bg-host{
+            font-size: 400%;
+        }
+    }
+    @media screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) { 
+        /* all iPad models, landscape */
+        
+    }
+    @media screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) { 
+        /* all iPad models, portrait */ 
+    }
 
-        <link href="/x/html/layout/watchtower/css/application.min.css" rel="stylesheet">
+    @media screen and (min-width : 568px) and (max-width : 768px) { 
+        /* iPhone 5 */
+        .background-clock {
+              font-size: 300%;  
+        }
+        .bg-host{
+            font-size: 333%;
+        }
+    }
 
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta charset="utf-8">
+    /*
+        Apple iPhone 5
+    */
 
-        {* TODO: Make a min & compress file for all css *}
-        {if $HTML.HEAD.CSS != ''}
-        <link rel="stylesheet" type="text/css" href="{$HTML.HEAD.CSS}">
-        {/if} 
+    @media screen and (min-width : 320px) and (max-width : 568px) { 
+        /* iPhone 5 */
+        .background-clock {
+              font-size: 222%;  
+        }
+        .bg-host{
+            font-size: 222%;
+        }
+    }
+    @media screen and (min-width : 320px) and (max-width : 568px) and (orientation : landscape) { 
+        /* iPhone 5, landscape */
+          
+    }
+    @media screen and (min-width : 320px) and (max-width : 568px) and (orientation : portrait) { 
+        /* iPhone 5, portrait */ 
+          
+    }
 
-        {if $HTML.HEAD.JS != ''}
-        <!--
-        <script type="text/javascript" src="{$HTML.HEAD.JS}"></SCRIPT>
-        -->
-        {/IF} 
+    /*
+        iPhone 2 - 4 and iPod Touch
+    */
 
-        <style type="text/css"> 
-
-        @media all {
-            /* all devices */
-             .background-clock {
-                position: fixed; font-size: 350%; color: rgba(0,0,0,0.444);
-
-                top                : 30px; 
-                left               : 45px;
-                /* -- transition is the magic sauce for animation -- */
-                -webkit-transition          : all .4s ease-in-out;
-                transition                  : all .4s ease-in-out;
-            }
-            .bg-host{
-                position           : fixed;
-                font-size          : 500%;
-                color              : rgba(0,0,0,0.15);
-                z-index            : -1;
-                bottom: 55px; right: 25px;
-                -webkit-transition : all .4s ease-in-out;
-                transition         : all .4s ease-in-out;
-            }
-        } 
-        @media screen {
-            /* computer screens */
-             
-        }
-        @media print {
-            /* printers */
-        }
-        @media aural {
-            /* speech and sound synthesizers */
-        }
-        @media braille {
-            /* braille tactile feedback devices */
-        }
-        @media embossed {
-            /* paged braille printers */
-        }
-        @media handheld {
-            /* small or handheld devices */
-        }
-        @media projection {
-            /* projected presentations */
-        }
-        @media tty {
-            /* teletypes and terminals */
-        }
-        @media tv {
-            /* television-type devices */
-        }
-
-
-        @media screen and (max-width: 768px){ 
-            /* all iPad models */
-            
-        }
-
-        /*
-            iPad
-        */
-
-        @media screen and (min-width : 768px) and (max-width : 1200px)  { 
-            /* all iPad models */
-            .background-clock {
-                 font-size: 200%;  
-            }
-            .bg-host{
-                font-size: 400%;
-            }
-        }
-        @media screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) { 
-            /* all iPad models, landscape */
-           
-        }
-        @media screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) { 
-            /* all iPad models, portrait */ 
-        }
-
-        @media screen and (min-width : 568px) and (max-width : 768px) { 
-            /* iPhone 5 */
-            .background-clock {
-                 font-size: 300%;  
-            }
-            .bg-host{
-                font-size: 333%;
-            }
-        }
-
-        /*
-            Apple iPhone 5
-        */
-
-        @media screen and (min-width : 320px) and (max-width : 568px) { 
-            /* iPhone 5 */
-            .background-clock {
-                 font-size: 222%;  
-            }
-            .bg-host{
-                font-size: 222%;
-            }
-        }
-        @media screen and (min-width : 320px) and (max-width : 568px) and (orientation : landscape) { 
-            /* iPhone 5, landscape */
-             
-        }
-        @media screen and (min-width : 320px) and (max-width : 568px) and (orientation : portrait) { 
-            /* iPhone 5, portrait */ 
-             
-        }
-
-        /*
-            iPhone 2 - 4 and iPod Touch
-        */
-
-        @media screen and (min-width : 320px) and (max-width : 480px) {     /* iPhone 2 - 4 and iPod Touch */ 
-             
-        }
-        @media screen and (min-width : 320px) and (max-width : 480px) and (orientation : landscape) { 
-            /* iPhone 2 - 4 and iPod Touch, landscape */ 
-            
-        }
-        @media screen  and (min-width : 320px)  and (max-width : 480px)  and (orientation : portrait) { 
-            /* iPhone 2 - 4 and iPod Touch, portrait */ 
-             
-        }
-        </style>
+    @media screen and (min-width : 320px) and (max-width : 480px) {     /* iPhone 2 - 4 and iPod Touch */ 
+          
+    }
+    @media screen and (min-width : 320px) and (max-width : 480px) and (orientation : landscape) { 
+        /* iPhone 2 - 4 and iPod Touch, landscape */ 
+        
+    }
+    @media screen  and (min-width : 320px)  and (max-width : 480px)  and (orientation : portrait) { 
+        /* iPhone 2 - 4 and iPod Touch, portrait */ 
+          
+    }
+    </style>
 </head>
-	    
+      
 
-		<STYLE TYPE="text/css">
-
-
+    <STYLE TYPE="text/css">
 
 
 
-			{* Build CSS Based from DB Info *}
-			/*{FOREACH from=$HTML.HEAD.STYLE item=style}
-				{$style.element}{if $style.state != "" && $style.state != " "}:{$style.state}{/if}{
-				{FOREACH from=$style.attr item=attr}
-				{$attr.key} : {$attr.value};
-				{/FOREACH}
-			}
-			{/FOREACH}*/
 
-			 body{
-				background : rgb(109,179,242); /* Old browsers */
-				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-				/*background : url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkYjNmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE5JSIgc3RvcC1jb2xvcj0iIzU0YTNlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iIzM2OTBmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZTY5ZGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-				background : -moz-linear-gradient(left,  rgba(109,179,242,1) 0%, rgba(84,163,238,1) 19%, rgba(54,144,240,1) 60%, rgba(30,105,222,1) 100%);  FF3.6+ 
-				background : -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(109,179,242,1)), color-stop(19%,rgba(84,163,238,1)), color-stop(60%,rgba(54,144,240,1)), color-stop(100%,rgba(30,105,222,1))); /* Chrome,Safari4+ 
-				background : -webkit-linear-gradient(left,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* Chrome10+,Safari5.1+ 
-				background : -o-linear-gradient(left,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* Opera 11.10+ 
-				background : -ms-linear-gradient(left,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* IE10+ 
-				background : linear-gradient(to right,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* W3C 
-				filter     : progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=1 ); /* IE6-8  */*/*/*/*/*/*/
-			}
+
+      {* Build CSS Based from DB Info *}
+      /*{FOREACH from=$HTML.HEAD.STYLE item=style}
+        {$style.element}{if $style.state != "" && $style.state != " "}:{$style.state}{/if}{
+        {FOREACH from=$style.attr item=attr}
+        {$attr.key} : {$attr.value};
+        {/FOREACH}
+      }
+      {/FOREACH}*/
+
+       body{
+        background : rgb(109,179,242); /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        /*background : url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkYjNmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE5JSIgc3RvcC1jb2xvcj0iIzU0YTNlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iIzM2OTBmMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZTY5ZGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background : -moz-linear-gradient(left,  rgba(109,179,242,1) 0%, rgba(84,163,238,1) 19%, rgba(54,144,240,1) 60%, rgba(30,105,222,1) 100%);  FF3.6+ 
+        background : -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(109,179,242,1)), color-stop(19%,rgba(84,163,238,1)), color-stop(60%,rgba(54,144,240,1)), color-stop(100%,rgba(30,105,222,1))); /* Chrome,Safari4+ 
+        background : -webkit-linear-gradient(left,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* Chrome10+,Safari5.1+ 
+        background : -o-linear-gradient(left,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* Opera 11.10+ 
+        background : -ms-linear-gradient(left,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* IE10+ 
+        background : linear-gradient(to right,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 19%,rgba(54,144,240,1) 60%,rgba(30,105,222,1) 100%); /* W3C 
+        filter     : progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=1 ); /* IE6-8  */*/*/*/*/*/*/
+      }
 
             body{
                 background: none;
@@ -196,23 +185,23 @@
                 background-position: center center  !important; 
             }
 
-			.transparent-black-25{
-				background-color: rgba(0,0,0,0.25);
-			}
-			.transparent-black-50{
-				background-color: rgba(0,0,0,0.55);
-			}
-			.transparent-black-75{
-				background-color: rgba(0,0,0,0.75);
-			}
-			.transparent-black-90{
-				background-color: rgba(0,0,0,0.90);
-			} 
-			</STYLE>
+      .transparent-black-25{
+        background-color: rgba(0,0,0,0.25);
+      }
+      .transparent-black-50{
+        background-color: rgba(0,0,0,0.55);
+      }
+      .transparent-black-75{
+        background-color: rgba(0,0,0,0.75);
+      }
+      .transparent-black-90{
+        background-color: rgba(0,0,0,0.90);
+      } 
+      </STYLE>
 <body class="background-dark">
 
 
-<iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"></iframe>
+<!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"></iframe> -->
 <small class="label tile label-sm widget " style="position: absolute; bottom: 0; left: 0; margin: 0 50px 10px 0;">super powered by<br/>  
     <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>
 </small>
@@ -312,7 +301,6 @@
                         <ul id="messages-menu" class="dropdown-menu messages" role="menu">
                             <li role="presentation">
                                 <a href="#" class="message">
-                                    <img src="img/1.jpg" alt="">
                                     <div class="details">
                                         <div class="sender">Jane Hew</div>
                                         <div class="text">
@@ -323,7 +311,6 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="message">
-                                    <img src="img/2.jpg" alt="">
                                     <div class="details">
                                         <div class="sender">Alies Rumiancaŭ</div>
                                         <div class="text">
@@ -334,7 +321,6 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="message">
-                                    <img src="img/3.jpg" alt="">
                                     <div class="details">
                                         <div class="sender">Michał Rumiancaŭ</div>
                                         <div class="text">
@@ -432,7 +418,7 @@
                         </a>
                         <ul id="account-menu" class="dropdown-menu account" role="menu">
                             <li role="presentation" class="account-picture">
-                                <img src="/users/avatar" class="img-circle" alt="">
+                                <!-- <img src="/users/avatar" class="img-circle" alt=""> -->
                                 {$user.username}
                             </li>
                             <li role="presentation">
@@ -565,13 +551,13 @@
     </script>
 
 
-	{if $HTML.BODY.CSS != ''}
-		<!-- <link rel="stylesheet" type="text/css" href="{$HTML.BODY.CSS}"> -->
-	{/if}
-		
-	{if $HTML.BODY.JS != ''}
-		<!-- script src="{$HTML.BODY.JS}"></script -->
-	{/if}  
+  {if $HTML.BODY.CSS != ''}
+    <!-- <link rel="stylesheet" type="text/css" href="{$HTML.BODY.CSS}"> -->
+  {/if}
+    
+  {if $HTML.BODY.JS != ''}
+    <!-- script src="{$HTML.BODY.JS}"></script -->
+  {/if}  
 
     
 

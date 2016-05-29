@@ -1,25 +1,17 @@
 <IfModule mod_rewrite.c>
-Options +FollowSymLinks
-
-AddType image/svg+xml svg
-AddType image/svg+xml svgz
-
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteCond $1 !^index.php/([^.*]+)
-
-RewriteCond $1 !^(index\.php)
-
+  Options +FollowSymLinks
+  AddType image/svg+xml svg
+  AddType image/svg+xml svgz
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
 # Keep the graphics and style sheet the way they are
-RewriteCond $1 !^htdocs(.*).css$
-RewriteCond $1 !^htdocs(.*).js$
-RewriteCond $1 !^htdocs(.*).gif$ 
-RewriteCond $1 !^htdocs(.*).jpg$
-RewriteCond $1 !^htdocs(.*).png$ 
-RewriteRule ^(.*)$ index.php?/$1 [L]
-
-
-
+  RewriteCond $1 !^htdocs(.*).css$
+  RewriteCond $1 !^htdocs(.*).js$
+  RewriteCond $1 !^htdocs(.*).gif$
+  RewriteCond $1 !^htdocs(.*).jpg$
+  RewriteCond $1 !^htdocs(.*).png$
+  RewriteCond $1 !^index.php/([^.*]+)
+  RewriteCond $1 !^(index\.php)
+  RewriteRule ^(.*)$ index.php?/$1 [L]
 </IfModule>
