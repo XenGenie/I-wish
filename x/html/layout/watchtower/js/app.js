@@ -92,7 +92,6 @@ function initPjax(){
         this._initOnResizeCallbacks();
 
         if (this.pjaxEnabled){
-
             //prevent pjaxing if already loading
             this.$sidebar.find('a:not(.accordion-toggle):not([data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
             $(document).pjax('#sidebar a:not(.accordion-toggle):not([data-no-pjax])', '.content', {
@@ -179,10 +178,10 @@ function initPjax(){
         var f = this.loadGrid;
         $(document).pjax('.content a:not(.accordion-toggle):not([data-no-pjax])', '.content', {
             fragment: '.content',
-            type: 'GET', //use POST to prevent caching when debugging,
+            type: 'POST', //use POST to prevent caching when debugging,
             timeout: 10000,
             success: function(){
-            	f();
+              f();
             }
         });
     };
@@ -235,8 +234,6 @@ function initPjax(){
             script.innerHTML = this.innerHTML;
             document.body.appendChild(script);
         });
-
-
 
         //ensure synchronous loading
         var $previous = {
@@ -317,9 +314,7 @@ function initDemoFunctions(){
 }
 
 $(function(){
-
     var $sidebar = $('#sidebar');
-
     $sidebar.on("mouseleave",function(){
         if (($(this).is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
             setTimeout(function(){
