@@ -96,7 +96,7 @@ function initPjax(){
             this.$sidebar.find('a:not(.accordion-toggle):not([data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
             $(document).pjax('#sidebar a:not(.accordion-toggle):not([data-no-pjax])', '.content', {
                 fragment: '.content',
-                type: 'GET', //use POST to prevent caching when debugging,
+                type: 'POST', //use POST to prevent caching when debugging,
                 timeout: 10000
             });
             $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
@@ -129,11 +129,10 @@ function initPjax(){
 
     PjaxApp.prototype._changeActiveNavigationItem = function(event, xhr, options){
         this.$sidebar.find('li.active').removeClass('active');
-
         this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
             if (this.href === options.url){
-                $(this).closest('li').addClass('active')
-                    .closest('.panel').addClass('active');
+              $(this).closest('li').addClass('active')
+                .closest('.panel').addClass('active');
             }
         });
     };

@@ -9,9 +9,7 @@ $(function(){
             //     dataType: 'json',
             //     success:function(data, textStatus, jqXHR){
             //         //data: return data from server
-                    
             //         DATA = data.data;
-    
             //         var chart = nv.models.lineChart() 
             //             .margin({top: 0, bottom: 25, left: 25, right: 0})
             //             .showLegend(true)
