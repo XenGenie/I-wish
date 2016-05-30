@@ -5,7 +5,7 @@
     <title>
 
     </title>
-    <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">   
+    <!-- <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">    -->
     <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
     <link rel="stylesheet" href="/bin/css/font-awesome.css">
     <link href='http://fonts.googleapis.com/css?family=Geo|Righteous|Allerta' rel='stylesheet' type='text/css'> 
@@ -19,10 +19,9 @@
     <!--
     <script type="text/javascript" src="{$HTML.HEAD.JS}"></SCRIPT>
     -->
-    {/IF} 
+    {/if} 
 
-    <style type="text/css"> 
-
+    <style type="text/css">
     @media all {
         /* all devices */
           .background-clock {
@@ -43,10 +42,9 @@
             -webkit-transition : all .4s ease-in-out;
             transition         : all .4s ease-in-out;
         }
-    } 
+    }
     @media screen {
         /* computer screens */
-          
     }
     @media print {
         /* printers */
@@ -72,11 +70,8 @@
     @media tv {
         /* television-type devices */
     }
-
-
-    @media screen and (max-width: 768px){ 
+    @media screen and (max-width: 768px){
         /* all iPad models */
-        
     }
 
     /*
@@ -284,9 +279,6 @@
     <header class="page-header">
     <div class="navbar">
                 <ul class="nav navbar-nav navbar-right pull-right">
-
-
-
                     <li class="visible-phone-landscape">
                         <a href="#" id="search-toggle">
                             <i class="fa fa-search"></i>
