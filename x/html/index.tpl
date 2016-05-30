@@ -1,1 +1,1 @@
-{if isset($_POST._pjax) }  <body>    <div class="content container" id="container" data-pjax-container>      {include file="layout/sidedoor/frame.tpl"}    </div>  </body>{else}  {include file="layout/$LAYOUT/frame.tpl"}{/if}
+{strip}{if isset($_POST._pjax) }  <body>    <div class="content container" id="container" data-pjax-container>      {include file="layout/sidedoor/frame.tpl"}    </div>  </body>{else}  {include file="layout/$LAYOUT/frame.tpl"}{/if}{/strip}
