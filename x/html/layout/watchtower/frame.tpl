@@ -2,13 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
 
     </title>
     <!-- <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">    -->
     <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
+    <link rel="stylesheet" href="/bin/css/jetblack.bootstrap.css">
     <link href="/x/html/layout/watchtower/css/application.css" rel="stylesheet">
     <link rel="stylesheet" href="/bin/css/font-awesome.css">
+
     <link href='http://fonts.googleapis.com/css?family=Geo|Righteous|Allerta' rel='stylesheet' type='text/css'> 
     <!-- <link href="/x/html/layout/watchtower/css/application.min.css" rel="stylesheet"> -->
     {* TODO: Make a min & compress file for all css *}
@@ -26,9 +30,10 @@
     @media all {
         /* all devices */
         .background-clock {
-          position: fixed; font-size: 350%; color: rgba(0,0,0,0.444);
-          top                : 10px;
-          left               : 25px;
+          position: fixed; font-size: 350%; 
+          color: rgba(255, 255, 255, 0.5);
+          top                : 15px;
+          left               : 40px;
           /* -- transition is the magic sauce for animation -- */
           -webkit-transition          : all .4s ease-in-out;
           transition                  : all .4s ease-in-out;
@@ -178,8 +183,8 @@
 
 
 <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"></iframe> -->
-<small class="label tile label-sm widget " style="position: fixed; bottom: 0; left: 0; margin: 0 50px 10px 0;">super powered by<br/>  
-    <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&h=16"/>
+<small class="label tile label-sm widget " style="position: fixed; bottom: 0; left: 0; width: 160px; margin: 20px 0;">super powered by<br/>  
+    <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&w=160" style="max-width: 100%"/>
 </small>
 
 <div class="logo text-center">
@@ -247,14 +252,16 @@
             <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
         </li>
     </ul>
-    <div id="sidebar-settings" class="settings">
-        <button type="button"
-                data-value="icons"
-                class="btn-icons btn btn-transparent btn-sm"><i class="fa fa-toggle-left fa-1x"></i></button>
-        <button type="button"
-                data-value="auto"
-                class="btn-auto btn btn-transparent btn-sm"><i class="fa fa-toggle-right fa-1x"></i></button>
-    </div> 
+    <!-- <div id="sidebar-settings" class="settings"> -->
+    <!--     <button type="button" -->
+    <!--             data-value="icons" -->
+    <!--             class="btn-icons btn btn-transparent btn-sm"><i class="fa fa-toggle-left fa-1x"></i></button> -->
+    <!--     <button type="button" -->
+    <!--       data-value="auto" -->
+    <!--       class="btn-auto btn btn-transparent btn-sm"> -->
+    <!--       <i class="fa fa-toggle-right fa-1x"></i> -->
+    <!--     </button> -->
+    <!-- </div>  -->
 </nav>
 <div class="wrap">
     <header class="page-header">
