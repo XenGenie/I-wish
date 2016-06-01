@@ -1,5 +1,5 @@
-<div class="row"> 
-    <div class="col-md-9 widget-container ">  
+<div class="row">
+    <div class="col-md-9 widget-container ">
         <section class="widget locked">
             <p class="pull-right visible-xs">
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
@@ -7,10 +7,10 @@
             <div class="jumbotron handle">
                 <div class="container">
                     <div class="widget-controls" data-widgster="restore">
-                        <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
-                        <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
-                        <a data-widgster="load" title="I am spinning!" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
-                        <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                      <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                      <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                      <a data-widgster="load" title="I am spinning!" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
+                      <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
                     </div>
                     <div id="carousel-example-generic" class="carousel slide">
                         <ol class="carousel-indicators outer">
@@ -23,7 +23,6 @@
                             <li data-target="#carousel-example-generic" data-slide-to="6"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="7"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="8"></li>
-
                             <li data-target="#carousel-example-generic" data-slide-to="9"></li>
                             <!-- <li data-target="#carousel-example-generic" data-slide-to="10"></li> -->
                             <!-- <li data-target="#carousel-example-generic" data-slide-to="11"></li> -->
@@ -124,7 +123,6 @@
                         </a>
                     </div>
 
-
                     <!-- <span class="label label-default">Key: </span>
                     <span class="label label-danger">&alpha;</span>
                     <span class="label label-warning">&beta;</span>
@@ -156,9 +154,6 @@
                              
                         </div>
                     </div>
-
-
-
                     <div class="col-md-6" data-widgster="restore"> 
                         <ol class="breadcrumb">
                             <li><a href=""><i class="fa fa-home"></i> {$WWW}</a></li>
@@ -218,9 +213,6 @@
                                 {/if}
                             {/foreach}
                         </ul>
-
-
-                        
                     </div>
                 </div>
             </div>
@@ -234,18 +226,14 @@
             </div>
         </div>
         -->
-         
     </div>
 <div class="col-md-3  widget-container ">
-    {include file="~widgets/top_x_shortcuts.html"}  
-</div> 
+    {include file="~widgets/top_x_shortcuts.html"}
 </div>
-
-    
+</div>
     <script type="text/javascript" src="/x/html/layout/watchtower/lib/jquery-ui-1.10.3.custom.js"> </script>
     <script type="text/javascript" src="/x/html/layout/watchtower/lib/jquery.ui.touch-punch.js"> </script>
    <!-- page specific -->
     <script type="text/javascript" src="/x/html/layout/watchtower/js/index.js"></script>
  
     <script type="text/javascript" src="/x/html/layout/watchtower/js/grid-live.js"> </script>
- 
