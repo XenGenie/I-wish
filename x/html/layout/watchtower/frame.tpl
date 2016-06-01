@@ -26,26 +26,44 @@
     -->
     {/if} 
 
+    {nocache}
+    <style type="text/css">
+      {foreach $LANG.ADMIN.AREAS_ICO as $k => $v}
+
+        .fa-{$k}:before{
+          content: "\{$v}";
+        }
+
+      {/foreach}
+    </style>
+    {/nocache}
     <style type="text/css">
     @media all {
         /* all devices */
         .background-clock {
-          position: fixed; font-size: 350%; 
+            color              : rgba(0,0,0,0.15);
+            position           : fixed;
+            font-size          : 500%;
+            z-index            : -1;
+            bottom: 15px; 
+            right: 25px;
+            -webkit-transition : all .4s ease-in-out;
+            transition         : all .4s ease-in-out;
+        }
+        .zo {
+          position: absolute; 
+          /* color: rgba(0,0,0,.15); */
+          /* top: -23px; */
+          left: -65px;
+          /* font-size: 150%; */
+
+        }
+        .bg-host{
+          font-size: 350%; 
           color: rgba(255, 255, 255, 0.5);
-          top                : 15px;
-          left               : 40px;
           /* -- transition is the magic sauce for animation -- */
           -webkit-transition          : all .4s ease-in-out;
           transition                  : all .4s ease-in-out;
-        }
-        .bg-host{
-            position           : fixed;
-            font-size          : 500%;
-            color              : rgba(0,0,0,0.15);
-            z-index            : -1;
-            bottom: 55px; right: 25px;
-            -webkit-transition : all .4s ease-in-out;
-            transition         : all .4s ease-in-out;
         }
     }
     @media screen {
@@ -78,6 +96,7 @@
     @media screen and (max-width: 768px){
         /* all iPad models */
     }
+
 
     /*
         iPad
@@ -117,7 +136,12 @@
     @media screen and (min-width : 320px) and (max-width : 568px) { 
         /* iPhone 5 */
         .background-clock {
+              margin-top: -25px;
               font-size: 222%;  
+              width: 85%;
+              text-align: center;
+              padding: 10px;
+              color: rgba(0,0,0,0.3);
         }
         .bg-host{
             font-size: 222%;
@@ -149,8 +173,6 @@
     }
     </style>
 </head>
-      
-
     <STYLE TYPE="text/css">
 
 
@@ -180,25 +202,33 @@
       } 
       </STYLE>
 <body class="background-dark">
-
-
 <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"></iframe> -->
-<small class="label tile label-sm widget " style="position: fixed; bottom: 0; left: 0; width: 160px; margin: 20px 0;">super powered by<br/>  
-    <a href="http://superdomx.com/" target="_blank"></a><img src="{$thumb}src=/bin/images/logos/sdx.png&w=160" style="max-width: 100%"/>
+<small class="label tile label-sm widget " style="position: fixed; bottom: 0; left: 0; width: 120px;
+    margin: 23px 35px 23px 23px;">
+  super powered by
+  <br/>
+  <a href="http://superdomx.com/" target="_blank">
+    <img src="{$thumb}src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
+  </a>
 </small>
 
 <div class="logo text-center">
     <h4  class="bg-host ">
-        {$HTTP_HOST} 
-    </h4>   
+        {$HTTP_HOST}
+    </h4>
 </div>
 <div class="background-clock" >
-    {include file="../../~blox/clock.tpl"}   
+    {include file="../../~blox/clock.tpl"}
 </div>
 <nav id="sidebar" class="sidebar nav-collapse collapse">
     <ul id="side-nav" class="side-nav"> 
         <li class="active">
-            <a href="/{$toBackDoor}"><i class="fa fa-eye"></i> <span class="name"><b>Master Tower</b></span>  </a>
+            <a href="/{$toBackDoor}">
+              <i class="fa fa-dashboard"></i> 
+              <span class="name">
+              Dash
+              </span>  
+            </a>
         </li> 
 
         <!-- {counter start=0} -->
@@ -431,7 +461,6 @@
                         </a>
                     </li>
 
-                    <li class="divider"></li>
                      <li class=" hidden-xs">
                         <a href="/" data-widgster="fullscreen" title="Full Screen" >
                             <i class="fa fa-globe"></i>
@@ -443,8 +472,7 @@
                     <input type="search" class="search-query" placeholder="Search...">
                 </form>
         </div>
-</header> 
-     
+</header>
     <div class="loader-wrap hiding hide">
         <i class="loader"></i>
         <style type="text/css"> 
@@ -678,7 +706,6 @@
     </script>
 
     {include file="~blox/ajax/save.x.tpl"}
-    
     <script type="text/javascript"> 
         $(function(){
             function loadScript() {
@@ -976,7 +1003,6 @@
     <div class="content container" id="container" data-pjax-container>
         {assign var="WT" value="/x/html/layout/watchtower/"}
         {if $TPL_EXISTS && $Xtra != '' AND $method  != '' AND ($Xtra != 'index')}
-            {include file="./x.nav.tpl"}
             {include file="../../../{$suite}/x{$Xtra|ucfirst}/$method.tpl" assign=PORTAL}     
         {else if $HTML.BODY.HTML == ''}
             {include file="../../$Door/portal.tpl" assign=PORTAL}

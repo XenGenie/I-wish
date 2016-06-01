@@ -76,7 +76,7 @@
 
 	  	next = ( d.getMonth() == 11 && next ) ? -11 : next
 
-	  	currentTimeString = currentTimeString.replace('Z','<b>'+zodiac[d.getMonth()+next]+'</b>');
+	  	currentTimeString = currentTimeString.replace('Z','<span class="zo">'+zodiac[d.getMonth()+next]+'</span>');
 
 	
 

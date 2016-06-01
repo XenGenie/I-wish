@@ -137,9 +137,8 @@
                         </header>
                         <div class="body">
                             <p>
-                                <i class="fa fa-quote-right fa-3x pull-right fa-border"></i>
+                                <i class="fa fa-quote-right fa-3x pull-left"></i>
                                 <blockquote>I hope you feel right at home among your new Super Domain. <strong>Super Dom</strong> was made with everyone in mind. Please take a moment to browse around and get well aquainted. 
-
                                     SuperDom was built to be:
                                     <ul class="text-list fa-ul">
                                         <li><i class="fa fa-li">&#9822;</i> <strong>Simple</strong></li>
