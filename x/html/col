@@ -1,0 +1,21 @@
+<div class="
+  {if isset($xs)}
+    col-xs-{$xs}
+  {/if}
+  {if isset($sm)}
+    col-sm-{$sm}
+  {/if}
+  {if isset($md)}
+    col-md-{$md}
+  {/if}
+  {if isset($lg)}
+    col-lg-{$lg}
+  {/if}
+  {if isset($class)}
+    {$class}
+  {/if}
+">
+  {if $tpl}
+    {include "$tpl.tpl"}
+  {/if}
+</div>

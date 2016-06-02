@@ -1,0 +1,47 @@
+{$noendtags   = ['input','br','hr','meta','link','img']}
+{$ignoreattrs = ['children','html','div','data','tpl','var']}
+{if $dom.div}
+  <{$dom.div}
+    {foreach $dom as $k => $v}
+      {if $k == 'id' && $k != "HTML"}
+        {$k}="{include 'eval' v="$v"}"
+      {elseif $v && !$k|in_array:$ignoreattrs}
+        {$k}="{include 'eval' v=$v}"
+      {/if}
+    {/foreach}
+    {$endtag = ($dom.div|in_array:$noendtags) ? false : true}
+  {if !$endtag}/{/if}>
+{/if}
+    {include "eval" v=$dom.html}
+    {if !empty($dom.children)}
+      {foreach ","|explode:$dom.children as $key => $child}
+        {$children[$child|trim] = $parent[$child|trim]}
+      {/foreach}
+    {/if}
+    {if !empty($dom.tpl)}
+    <!--   Include Files {$dom.tpl} -->
+      {foreach ","|explode:$dom.tpl as $key => $tpl}
+        {if $dom.data != '' }
+          {$now = "tmp_{$smarty.now|md5|substr:-6}"}
+          {google_sheet read=$dom.data var="_$now" full_sheet=true}
+          {$x = $_{$now}}
+          {${$dom.var} = $x}
+        {/if}
+        {if $tpl == 'dom'}
+          {dom x=$x y='HTML'}
+        {else}
+          {include "$tpl" }
+        {/if}
+      {/foreach}
+    {/if}
+    {if !empty($dom.children)}
+      {foreach ","|explode:$dom.children as $key => $child}
+        {if $child != ''}
+          {$child = $child|trim}
+          {dom x=$parent y=$child}
+        {/if}
+      {/foreach}
+    {/if}
+{if $dom.div && $endtag}
+</{$dom.div}>
+{/if}

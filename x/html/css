@@ -1,0 +1,9 @@
+{foreach $CSS as $key => $css}
+  {$key}{
+  {foreach $CSS[$key] as $k => $v}
+    {if $k != 'id' && $v != ''}
+    {$k} : {$v|replace:';':''};
+    {/if}
+  {/foreach}
+  }
+{/foreach}

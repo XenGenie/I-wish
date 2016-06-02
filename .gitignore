@@ -1,5 +1,4 @@
 # Ignore everything:
-*
 *.hits
 */__cache/*
 
