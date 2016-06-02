@@ -6,4 +6,5 @@
 # Except for X:
 !bin/ 
 !x/
+!x/html/
 !x/.php
