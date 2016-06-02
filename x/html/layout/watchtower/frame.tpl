@@ -221,15 +221,15 @@
     {include file="../../~blox/clock.tpl"}
 </div>
 <nav id="sidebar" class="sidebar nav-collapse collapse">
-    <ul id="side-nav" class="side-nav"> 
+    <ul id="side-nav" class="side-nav">
         <li class="active">
             <a href="/{$toBackDoor}">
-              <i class="fa fa-dashboard"></i> 
+              <i class="fa fa-eye"></i>
               <span class="name">
-              Dash
-              </span>  
+                Overview
+              </span>
             </a>
-        </li> 
+        </li>
 
         <!-- {counter start=0} -->
         {foreach $admin_menu as $key => $item}
@@ -1003,6 +1003,7 @@
     <div class="content container" id="container" data-pjax-container>
         {assign var="WT" value="/x/html/layout/watchtower/"}
         {if $TPL_EXISTS && $Xtra != '' AND $method  != '' AND ($Xtra != 'index')}
+            {include file="layout/$LAYOUT/x.nav.tpl"}
             {include file="../../../{$suite}/x{$Xtra|ucfirst}/$method.tpl" assign=PORTAL}     
         {else if $HTML.BODY.HTML == ''}
             {include file="../../$Door/portal.tpl" assign=PORTAL}

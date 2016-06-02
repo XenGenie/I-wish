@@ -1,5 +1,5 @@
 <div class="jumbotron tile-light">
-    <p>{$j.icon}</p>
+    <!-- <p>{$j.icon}</p> -->
     <h1>{$j.head}</h1>
     <!-- <blockquote>{$j.quote}</blockquote> -->
     <p>{$j.quote}</p>

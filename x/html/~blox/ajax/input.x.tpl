@@ -16,6 +16,7 @@
       <span {if $i.desc}class="input-group-btn popover-test" data-content="{$i.desc}" data-original-title="{$txt}"{/if}
         class="input-group-btn" title="{$txt}"  style="width: 35px;">
           <a class="btn btn-alt btn-default btn-transparent pull-left" {if $i.href}href="{$i.href}" target="_blank" {/if} type="button"  style="width: 100%">
+              {$txt} 
               <i class="fa fa-question"  ></i> 
           </a>
       </span>
@@ -34,7 +35,7 @@
              id           ="{$_id}"
              data-trigger ="change" 
              required     ="required"
-             class        ="form-control"
+             class        ="form-control {$Xtra}"
              name         ="{$name}" 
              value        ="{if ${$Xtra}_{$name}}{${$Xtra}_{$name}}{else}{${$name}}{/if}" 
              placeholder  ="{$txt}"
@@ -45,16 +46,14 @@
       {else}
       <input id="{$_id}" type="{if !$i.type}text{else}{$i.type}{/if}"
              data-trigger="change" required="required"
-             
              name="{$name}" value="{if ${$Xtra}_{$name}}{${$Xtra}_{$name}}{else}{${$name}}{/if}" placeholder="{$txt}"
              onblur="window.config.save(this,{ {$Xtra}_{$name} : this.value })" style="width: 100%"
-             class="form-control {if $i.desc}tooltips underline{/if}" 
+             class="form-control {$Xtra} {if $i.desc}tooltips underline{/if}" 
                     {if $i.desc}
                         data-toggle="tooltip" title="" data-original-title="{$i.desc}"
                          data-placement="top"
                     {/if} 
-                   
-             > 
+             >
       {/if}
       <span class="input-group-btn" style="width: 35px">
           <a id="btn-{$_id}" class="btn btn-alt btn-success btn-block" type="button" onclick="window.config.save(this,{ {$name} : $('#{$_id}').val() })">

@@ -5,10 +5,10 @@
         <h1>
           {assign var=XTRA value="X{$Xtra|strtoupper}"}
           {if $method == 'index'}
-            <i class="fa {$LANG.$XTRA.ICON} fa-3x pull-right"></i> 
+            <!-- <i class="fa {$LANG.$XTRA.ICON} fa-3x pull-right"></i>  -->
             {$LANG.$XTRA.JUMBO.HEAD}
           {else}
-            <i class="fa {$LANG.$XTRA.$method.ICON} fa-3x pull-right"></i> 
+            <!-- <i class="fa {$LANG.$XTRA.$method.ICON} fa-3x pull-right"></i>  -->
             {$LANG.$XTRA.$method.JUMBO.HEAD}
           {/if}
         </h1>

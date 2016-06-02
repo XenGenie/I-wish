@@ -35,28 +35,21 @@
                   <div class="carousel-inner text-align-center">
                       <div class="item {if $anchor == 'index'}active{/if}">
                         <h1>
-                          <img src="/users/avatar" style="max-height: 200px; border-radius: 1000px;" class="pull-left"/>
+                          <!-- <img src="/users/avatar" style="max-height: 200px; border-radius: 1000px;" class="pull-left"/> -->
                           <!-- <i class="fa fa-4x fa-dashboard pull-left"></i> -->
                             Welcome {$user.username}
                             <!-- , Welcome to SuperdomX <small>Oxygen</small> -->
                         </h1>
                         <p >
-                          <!-- Welcome to your Super <b>Spacylecious</b> Watchtower. -->
                           From the Master Tower, you can watch any part of your domain;<br/> Click the <i class="fa fa-eye"></i> icon in a panel to view it here.
-                            <br/><br/>
-                            <small>
-                                <ul>
-                                    <li></li>
-                                </ul>
-
-                            </small>
+                                        <br/>
                             <a class="btn btn-primary btn-lg"  data-widgster="fullscreen" >
                                 <i class="fa fa-graduation-cap"></i> Learn More
                             </a>
                             <!-- <a class="btn btn-success btn-lg " data-widgster="fullscreen"> -->
                             <a class="btn btn-info btn-lg " href="/{$toBackDoor}/login/profile" data-widgster="restore">
                                 <i class="fa fa-arrow-left"></i> Back
-                            </a>  
+                            </a>
 
                             <p data-widgster="restore">
                                 Normally, there would be some more content here to describe what was just said above. Coming soon...
@@ -66,7 +59,10 @@
                       {foreach $admin_menu as $key => $item}
                           {if $key} 
                             <div class="item {if $anchor == $key}active{/if}">
-                                <h1><i class="fa fa-{$key} fa-4x pull-left"></i><br/>{$item.area|ucfirst}</h1>
+                                <h1>
+                                  {$item.area|ucfirst}
+                                  <i class="fa fa-{$key}"></i>
+                                </h1>
                                 <p>
                                     {$item.desc|ucfirst}
                                         <br/><br/>
