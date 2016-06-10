@@ -172,13 +172,8 @@
           
     }
     </style>
-</head>
+  </head>
     <STYLE TYPE="text/css">
-
-
-
-
-
       {* Build CSS Based from DB Info *}
       /*{FOREACH from=$HTML.HEAD.STYLE item=style}
         {$style.element}{if $style.state != "" && $style.state != " "}:{$style.state}{/if}{
@@ -187,7 +182,6 @@
         {/FOREACH}
       }
       {/FOREACH}*/
-
       .transparent-black-25{
         background-color: rgba(0,0,0,0.25);
       }
@@ -199,8 +193,8 @@
       }
       .transparent-black-90{
         background-color: rgba(0,0,0,0.90);
-      } 
-      </STYLE>
+      }
+    </STYLE>
 <body class="background-dark">
 <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"></iframe> -->
 <small class="label tile label-sm widget " style="position: fixed; bottom: 0; left: 0; width: 120px;
@@ -224,9 +218,14 @@
     <ul id="side-nav" class="side-nav">
         <li class="active">
             <a href="/{$toBackDoor}">
-              <i class="fa fa-eye"></i>
+              <!-- <img src="/users/avatar" class="fa" height="16px" align="absmiddle" style="border-radius: 50px;" /> -->
+<style>
+.fa-spin { -webkit-filter: blur(0); }
+</style>
+
+              <i class="fa fa-home"></i>
               <span class="name">
-                Overview
+                Welcome
               </span>
             </a>
         </li>
@@ -678,7 +677,7 @@
     <script src="/x/html/layout/watchtower/js/settings.js"></script> 
 
     <script type="text/javascript" src="/x/html/layout/watchtower/js/grid-live.js"> </script>
- <!-- page-specifig js-->
+  <!-- page-specifig js-->
     <script src="/x/html/layout/watchtower/js/maps.js"></script>
     <!-- page specific libs -->
     <script src="/x/html/layout/watchtower/lib/messenger-1.4.1/messenger.js"></script>
@@ -687,7 +686,6 @@
     <!-- demo-only libs -->
     <!-- // <script src="/x/html/layout/watchtower/lib/backbone/backbone-min.js"></script> -->
     <script src="/x/html/layout/watchtower/lib/messenger-1.4.1/docs/welcome/javascripts/location-sel.js"></script>
-
     <script src="/x/html/layout/watchtower/js/ui-notifications.js"></script>
     
     {include file="$Door/scripts.tpl" assign=SCRIPT}

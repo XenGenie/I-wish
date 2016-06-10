@@ -1,0 +1,51 @@
+  <div class="content-wrapper mid-vertical-positioning clearfix">
+    <div class="col-sm-12 text-left">
+      <h1 class="section-title">
+        Sponsors
+      </h1>
+      <div class="tabpanel styled-tabs uniform-height" role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          {assign var=active value=true}
+          {foreach $sponsors[0] as $k => $v}
+            {if $k != "id"}
+              <li class="{if $active}active{/if}" role="presentation">
+                <a aria-controls="tabs-tab1" data-toggle="tab" href=
+                "#tabs-tab{$k}" role="tab"><i class=
+                "icon fa fa-diamond"></i><span>{$k|ucwords}</span></a>
+              </li>
+              {assign var=active value=false}
+            {/if} 
+          {/foreach}
+        </ul>
+        <!-- Tab panes --> 
+        <div class="tab-content text-center">
+          {assign var=active value=true}
+          {foreach $sponsors[0] as $k => $v}
+            {if $k != "id"}
+              <div class="tab-pane row fade in {if $active}active{/if}" id="tabs-tab{$k}" role="tabpanel"> 
+                {$v}
+              </div>
+              {assign var=active value=false}
+            {/if}
+          {/foreach}     
+        </div>
+        <!-- .tab-content -->
+      </div>
+      <div class="text-center">
+        <hr/>
+        <a class="link-scroll btn btn-outline-inverse btn-lg " href="#donate">
+          make a donation <i class="fa fa-dollar"></i>
+        </a>
+       <a class="link-scroll btn btn-outline-inverse btn-lg " href="#join" 
+                >
+                <i class="fa fa-shield"></i>
+                
+                lifetime membership
+              </a>
+      </div>
+      <!-- .tabpanel -->
+    </div>
+    <!-- .col-sm-10 -->
+  </div>
+<!-- .section-wrapper -->

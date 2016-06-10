@@ -36,15 +36,14 @@
                       <div class="item {if $anchor == 'index'}active{/if}">
                         <h1>
                           <!-- <img src="/users/avatar" style="max-height: 200px; border-radius: 1000px;" class="pull-left"/> -->
-                          <!-- <i class="fa fa-4x fa-dashboard pull-left"></i> -->
-                            Welcome {$user.username}
-                            <!-- , Welcome to SuperdomX <small>Oxygen</small> -->
+                            Welcome
                         </h1>
-                        <p >
-                          From the Master Tower, you can watch any part of your domain;<br/> Click the <i class="fa fa-eye"></i> icon in a panel to view it here.
+                        <p>
+                          This area is your's to do with what ever you'd like.
                                         <br/>
-                            <a class="btn btn-primary btn-lg"  data-widgster="fullscreen" >
-                                <i class="fa fa-graduation-cap"></i> Learn More
+                                        <br/>
+                            <a class="btn btn-success btn-lg"  data-widgster="fullscreen" >
+                                <i class="fa fa-mouse-pointer"></i> <u>Click Here</u> to Learn More
                             </a>
                             <!-- <a class="btn btn-success btn-lg " data-widgster="fullscreen"> -->
                             <a class="btn btn-info btn-lg " href="/{$toBackDoor}/login/profile" data-widgster="restore">

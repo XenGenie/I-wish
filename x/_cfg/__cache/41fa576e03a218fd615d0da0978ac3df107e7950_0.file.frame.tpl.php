@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-06-02 07:32:42
+/* Smarty version 3.1.30-dev/72, created on 2016-06-04 07:04:15
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_574fc4fa081a70_10552964',
+  'unifunc' => 'content_5752614f140a86_58262891',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41fa576e03a218fd615d0da0978ac3df107e7950' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1464760359,
+      1 => 1465016651,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_574fc4fa081a70_10552964 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5752614f140a86_58262891 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -216,13 +216,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
           
     }
     </style>
-</head>
+  </head>
     <STYLE TYPE="text/css">
-
-
-
-
-
       
       /*<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['HTML']->value['HEAD']['STYLE'], 'style');
@@ -253,7 +248,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 */
-
       .transparent-black-25{
         background-color: rgba(0,0,0,0.25);
       }
@@ -265,8 +259,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
       }
       .transparent-black-90{
         background-color: rgba(0,0,0,0.90);
-      } 
-      </STYLE>
+      }
+    </STYLE>
 <body class="background-dark">
 <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"></iframe> -->
 <small class="label tile label-sm widget " style="position: fixed; bottom: 0; left: 0; width: 120px;
@@ -295,9 +289,14 @@ src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
         <li class="active">
             <a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
 ">
-              <i class="fa fa-eye"></i>
+              <!-- <img src="/users/avatar" class="fa" height="16px" align="absmiddle" style="border-radius: 50px;" /> -->
+<style>
+.fa-spin { -webkit-filter: blur(0); }
+</style>
+
+              <i class="fa fa-home"></i>
               <span class="name">
-                Overview
+                Welcome
               </span>
             </a>
         </li>
@@ -943,7 +942,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     <?php echo '<script'; ?>
  type="text/javascript" src="/x/html/layout/watchtower/js/grid-live.js"> <?php echo '</script'; ?>
 >
- <!-- page-specifig js-->
+  <!-- page-specifig js-->
     <?php echo '<script'; ?>
  src="/x/html/layout/watchtower/js/maps.js"><?php echo '</script'; ?>
 >
@@ -962,7 +961,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     <?php echo '<script'; ?>
  src="/x/html/layout/watchtower/lib/messenger-1.4.1/docs/welcome/javascripts/location-sel.js"><?php echo '</script'; ?>
 >
-
     <?php echo '<script'; ?>
  src="/x/html/layout/watchtower/js/ui-notifications.js"><?php echo '</script'; ?>
 >

@@ -64,6 +64,7 @@
         {/if}
     </div>
     <div class="footer text-align-center">
-        <span>{$title}</span>
+        <br/>
+        <!-- <span>{$title}</span> -->
     </div>
 </section>

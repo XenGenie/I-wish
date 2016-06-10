@@ -9,9 +9,7 @@
     spinner_template = '<div class="messenger-spinner">\n    <span class="messenger-spinner-side messenger-spinner-side-left">\n        <span class="messenger-spinner-fill"></span>\n    </span>\n    <span class="messenger-spinner-side messenger-spinner-side-right">\n        <span class="messenger-spinner-fill"></span>\n    </span>\n</div>';
 
     FlatMessage = (function(_super) {
-
         __extends(FlatMessage, _super);
-
         function FlatMessage() {
             return FlatMessage.__super__.constructor.apply(this, arguments);
         }
@@ -44,7 +42,7 @@ $(function(){
 
         // Messenger().post("SuperDom Successfully Loaded");
 
-        var loc = ['bottom', 'left'];
+        var loc = ['top', 'center'];
 
         var $lsel = $('.location-selector');
 

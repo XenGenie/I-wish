@@ -23396,10 +23396,10 @@ fieldset[disabled] .form-control.input-transparent {
 }
 
 .widget:not(.widget-tabs) .tab-content {
-  background: rgba(51, 51, 51, 0.3);
+  /* background: rgba(51, 51, 51, 0.3); */
   padding: 10px;
   border-radius: 0 0 3px 3px;
-  overflow: hidden;
+  overflow: visible ;
 }
 
 .widget:not(.widget-tabs) .tabs-below .tab-content {
@@ -25140,6 +25140,10 @@ table.table thead .sorting_desc_disabled {
 
 .login-widget .input-group-addon, .registration-widget .input-group-addon {
   padding: 8px 7px;
+}
+
+.input-group{
+  /* margin-bottom: 10px; */
 }
 
 .login-widget .input-group-addon i, .login-widget .input-group-addon i:before, .login-widget .input-group-addon i:after, .registration-widget .input-group-addon i, .registration-widget .input-group-addon i:before, .registration-widget .input-group-addon i:after {

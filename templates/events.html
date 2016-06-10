@@ -1,0 +1,52 @@
+        <article class="section-wrapper clearfix" data-custom-background-img=
+        "assets/images/other_images/bg2.jpg" id="grid">
+          <div class="content-wrapper clearfix">
+            <div class="col-sm-12 text-center">
+              <h1 class="section-title">
+                Events
+              </h1>
+              <!-- grid -->
+              <section class="grid row clearfix clearfix-for-2cols">
+                <!-- grid item -->
+                {foreach $calendar as $k => $v}
+                  <div class="grid-item col-md-6">
+                    <div class="item-content clearfix">
+                      <span class="icon fa fa-{$v.icon}"></span>
+                      <div class="text-content">
+                        <h5>
+                          <a href="{$v.htmlLink}" target="_blank">{$v.summary} 
+                          </a>
+                            <br/>
+                          <small class="badge">
+                          {if isset($v.start.date)}
+                            {$v.start.date}<br/>
+                          {else}
+                            {$v.start.dateTime}<br/>
+                          {/if}
+                          </small>
+                        </h5>
+                        <p>
+                          {if isset($v.description)}
+                            {$v.description}
+                          {/if}
+                          <a href="{$v.htmllink}" target="_blank">
+                            <i class="fa fa-pin"></i>
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- end: .item-content -->
+                  </div>
+                  <!-- end: .grid-item -->
+                  <!-- grid item -->
+                {/foreach}
+              </section>
+               <a class="link-scroll btn btn-outline-inverse btn-sm" href="#featured" 
+                >our fallen</a>
+              <!-- end: grid -->
+            </div>
+            <!-- .col-sm-11 -->
+          </div>
+          <!-- .content-wrapper -->
+        </article>
+        <!-- .section-wrapper -->

@@ -20,9 +20,17 @@
           {/if} 
         </blockquote>
         {foreach $LANG.$XTRA.JUMBO.BTN as $b => $btn}
-            <a class="btn btn-lg {$btn.class} {if $method == $b}active{/if}"   href="/{$toBackDoor}/{$Xtra}/{$b}">
+            <a
+              class="btn btn-lg {$btn.class} {if $method == $b}active{/if}"
+              {if isset($btn.modal) && $btn.modal == true}
+                data-toggle="modal" data-target="#modal-{$b}"
+              {else}
+                href="/{$toBackDoor}/{$Xtra}/{$b}"
+              {/if}
+              >
                 {$btn.a}
             </a>
+            {include "~blox/modal.tpl" id="modal-{$b}" ajax="{$Xtra}/{$b}" title="{$btn.a}"}
         {/foreach}
       </div>
     </section>
