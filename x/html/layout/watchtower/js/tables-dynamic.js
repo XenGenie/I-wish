@@ -1,9 +1,7 @@
-$(function(){
-
     function pageLoad(){
+      alert('Page Loaded');
         //Backgrid part
-
-        var Territory = Backbone.Model.extend({});
+        var Territory = Backbone.Model.extend({ });
 
         var PageableTerritories = Backbone.PageableCollection.extend({
             model: Territory,
@@ -50,7 +48,7 @@ $(function(){
                 collection: collection,
                 footer: Backgrid.Extension.Paginator.extend({
                     //okendoken. rewrite template to add pagination class to container
-                    template: _.template('<tr><td colspan="<%= colspan %>"><ul class="pagination"><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
+                    template: _.template('<tr><td colspan="<%= colspan %>"><ul class="pagination"><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) { %> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
                 }),
                 className: 'table table-striped table-editable no-margin'
             });
@@ -196,7 +194,7 @@ $(function(){
         var unsortableColumns = [];
         $('#datatable-table').find('thead th').each(function(){
             if ($(this).hasClass( 'no-sort')){
-                unsortableColumns.push({"bSortable": false});
+                unsortableColumns.push({ "bSortable": false });
             } else {
                 unsortableColumns.push(null);
             }
@@ -215,8 +213,6 @@ $(function(){
         });
     }
 
-    pageLoad();
+    // pageLoad();
 
     PjaxApp.onPageLoad(pageLoad);
-
-});
