@@ -1,17 +1,7 @@
-{$lib = '/x/html/layout/watchtower/lib'}
-  <!-- page specific libs -->
-      <script src="{$lib}/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-      <script src="{$lib}/underscore/underscore.js"></script>
-      <script src="{$lib}/backbone/backbone.js"></script>
-      <script src="{$lib}/backbone.paginator/lib/backbone.paginator.min.js"></script>
-      <script src="{$lib}/backgrid/lib/backgrid.min.js"></script>
-      <script src="{$lib}/backgrid-paginator/backgrid-paginator.js"></script>
-      <script src="{$lib}/datatables/media/js/jquery.dataTables.min.js"></script>
-
-        <!-- page application js -->
-<script type="text/javascript">
-  {include "./js/tables-dynamic.js"}
-</script>
+  <!-- page application js -->
+  <script type="text/javascript">
+    {include "./js/tables-dynamic.js"}
+  </script>
 
         <h2 class="page-title">Tables - <span class="fw-semi-bold">Dynamic</span></h2>
         <section class="widget">

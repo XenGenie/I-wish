@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-06-04 07:04:15
+/* Smarty version 3.1.30-dev/72, created on 2016-06-16 08:36:04
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_5752614f140a86_58262891',
+  'unifunc' => 'content_576248d47b44e9_42871918',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41fa576e03a218fd615d0da0978ac3df107e7950' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1465016651,
+      1 => 1466058955,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_5752614f140a86_58262891 (Smarty_Internal_Template $_smarty_tpl) {
+function content_576248d47b44e9_42871918 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -841,6 +841,37 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
  type="text/javascript" src="/x/html/layout/watchtower/lib/bootstrap/carousel.js"><?php echo '</script'; ?>
 >
       
+    <?php $_smarty_tpl->_assignInScope('lib', '/x/html/layout/watchtower/lib');
+?>
+    <!-- page specific libs -->
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
+/bootstrap-select/dist/js/bootstrap-select.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
+/underscore/underscore.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
+/backbone/backbone.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
+/backbone.paginator/lib/backbone.paginator.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
+/backgrid/lib/backgrid.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
+/backgrid-paginator/backgrid-paginator.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
+/datatables/media/js/jquery.dataTables.min.js"><?php echo '</script'; ?>
+>
 
     <!-- bootstrap custom plugins -->
     <?php echo '<script'; ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-06-16 08:04:17
+/* Smarty version 3.1.30-dev/72, created on 2016-06-16 08:38:44
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/table.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_576241615b4242_85621599',
+  'unifunc' => 'content_57624974a4d9e0_78295916',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ada3ebed2891755dfb6c758f1af3f3b9e5bab654' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/table.tpl',
-      1 => 1466057010,
+      1 => 1466059000,
       2 => 'file',
     ),
   ),
@@ -21,56 +21,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./js/tables-dynamic.js' => 1,
   ),
 ),false)) {
-function content_576241615b4242_85621599 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_assignInScope('lib', '/x/html/layout/watchtower/lib');
+function content_57624974a4d9e0_78295916 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-  <!-- page specific libs -->
+  <!-- page application js -->
 
-      <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
-/bootstrap-select/dist/js/bootstrap-select.min.js"><?php echo '</script'; ?>
->
-
-      <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
-/underscore/underscore.js"><?php echo '</script'; ?>
->
-
-      <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
-/backbone/backbone.js"><?php echo '</script'; ?>
->
-
-      <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
-/backbone.paginator/lib/backbone.paginator.min.js"><?php echo '</script'; ?>
->
-
-      <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
-/backgrid/lib/backgrid.min.js"><?php echo '</script'; ?>
->
-
-      <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
-/backgrid-paginator/backgrid-paginator.js"><?php echo '</script'; ?>
->
-
-      <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['lib']->value;?>
-/datatables/media/js/jquery.dataTables.min.js"><?php echo '</script'; ?>
->
-
-
-
-        <!-- page application js -->
-
-<?php echo '<script'; ?>
+  <?php echo '<script'; ?>
  type="text/javascript">
-  <?php $_smarty_tpl->_subTemplateRender("file:./js/tables-dynamic.js", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+    <?php $_smarty_tpl->_subTemplateRender("file:./js/tables-dynamic.js", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<?php echo '</script'; ?>
+  <?php echo '</script'; ?>
 >
 
         <h2 class="page-title">Tables - <span class="fw-semi-bold">Dynamic</span></h2>

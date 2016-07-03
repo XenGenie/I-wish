@@ -628,6 +628,15 @@
 
     <script type="text/javascript" src="/x/html/layout/watchtower/lib/bootstrap/carousel.js"></script>
       
+    {$lib = '/x/html/layout/watchtower/lib'}
+    <!-- page specific libs -->
+    <script src="{$lib}/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="{$lib}/underscore/underscore.js"></script>
+    <script src="{$lib}/backbone/backbone.js"></script>
+    <script src="{$lib}/backbone.paginator/lib/backbone.paginator.min.js"></script>
+    <script src="{$lib}/backgrid/lib/backgrid.min.js"></script>
+    <script src="{$lib}/backgrid-paginator/backgrid-paginator.js"></script>
+    <script src="{$lib}/datatables/media/js/jquery.dataTables.min.js"></script>
 
     <!-- bootstrap custom plugins -->
     <script src="/x/html/layout/watchtower/lib/bootstrap-datepicker.js"></script>

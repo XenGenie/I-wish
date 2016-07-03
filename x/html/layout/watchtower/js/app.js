@@ -212,11 +212,16 @@ function initPjax(){
     };
 
     PjaxApp.prototype._loadScripts = function(event, data, status, xhr, options){
+      DATA = data;
+
         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
             $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
             $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
             $existingScripts = $('script[src]'),
             $existingTemplates = $('script[type="text/template"]');
+            console.log('PJAX SCRIPTS');
+            console.log($bodyContents);
+            console.log($existingScripts);
 
         //append templates first as they are used by scripts
         $templates.each(function() {
