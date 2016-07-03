@@ -24,10 +24,12 @@
   require("_cfg/lang.cfg");
   require("_cfg/x.cfg");
 
-  $engine   = $cfg['dir']['libs'].'/x4deep/xengine.php';
-  $firephp  = $cfg['dir']['libs'].'/firephp/lib/FirePHPCore/FirePHP.class.php';
+  $lib = $cfg['dir']['libs'];
 
-  if( is_dir($cfg['dir']['libs']) && is_dir($cfg['dir']['Xtra'])  && is_file($engine) ){
+  $engine   = "{$lib}/x4deep/xengine.php";
+  $firephp  = "{$lib}/firephp/lib/FirePHPCore/FirePHP.class.php";
+
+  if( is_dir($lib) && is_dir($cfg['dir']['Xtra'])  && is_file($engine) ){
     require($engine);
     require($firephp);
 
@@ -36,6 +38,6 @@
     // GO!
     $X->knock();
   }else{
-    require $cfg['dir']['backdoor'].'/install.php';
+    require './install.php';
   }
 ?>
