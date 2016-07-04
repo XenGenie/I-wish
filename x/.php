@@ -29,9 +29,15 @@
   $engine       = "{$lib}/x4deep/xengine.php";
 
   $firephp      = "{$lib}/firephp/lib/FirePHPCore/FirePHP.class.php";
-
+  
+  echo "is lib";
+  echo "<br/>";
   echo  $is_lib_dir   = is_dir($lib);
+  echo "is xtra";
+  echo "<br/>";
   echo  $is_xtra_dir  = is_dir($cfg['dir']['Xtra']);
+  echo "is engine";
+  echo "<br/>";
   echo  $is_engine    = is_file($engine);
 
   if( is_dir($lib) && is_dir($cfg['dir']['Xtra'])  && is_file($engine) ){
