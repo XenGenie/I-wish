@@ -14,8 +14,8 @@
         {$name = {$name|replace:"{$Xtra}_":''} }
       {/if}
       -->
-      <div class="input-group col-sm-12">  
-          <span class="input-group-btn " style="width: 150px">
+      <div class="input-group col-sm-12">
+          <span class="input-group-btn hidden-xs" >
               <a id="btn-{$_id}" class="btn btn-alt btn-success btn-block text-left" type="button" onclick="window.config.save(this,{ {$name} : $('#{$_id}').val() })">
                   <i class="{$i.icon}" id="i-{$_id}"></i>
                   {$txt} 
@@ -57,7 +57,7 @@
                 >
           {/if}
           <span {if $i.desc}class="input-group-btn popover-test"
-                            data-placement="left"
+                            data-placement="top"
           data-content="{$i.desc}" data-original-title="{$txt}"{/if}
             class="input-group-btn" title="{$txt}"  style="width: 35px;">
               <a class="btn btn-alt btn-info " {if $i.href}href="{$i.href}" target="_blank" {/if} type="button"  style="width: 100%">

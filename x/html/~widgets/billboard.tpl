@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-{if $size}{$size}{else}12{/if}"> 
     <section class="widget">
-      <div class="jumbotron">
+      <div class="jumbotron text-center">
         <h1>
           {assign var=XTRA value="X{$Xtra|strtoupper}"}
           {if $method == 'index'}
@@ -12,16 +12,16 @@
             {$LANG.$XTRA.$method.JUMBO.HEAD}
           {/if}
         </h1>
-        <blockquote>
-                {if $method == 'index'}
+        <p>
+          {if $method == 'index'}
             {$LANG.$XTRA.JUMBO.QUOTE}
           {else}
             {$LANG.$XTRA.$method.JUMBO.QUOTE}
           {/if} 
-        </blockquote>
+        </p>
         {foreach $LANG.$XTRA.JUMBO.BTN as $b => $btn}
             <a
-              class="btn btn-lg {$btn.class} {if $method == $b}active{/if}"
+              class="btn btn-lg {$btn.class} {if $method == $b}active{/if} btn-xs-block"
               {if isset($btn.modal) && $btn.modal == true}
                 data-toggle="modal" data-target="#modal-{$b}"
               {else}

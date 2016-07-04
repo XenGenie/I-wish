@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-06-04 09:31:46
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 12:13:09
   from "/home/xopher/www/superdomx.com/x/html/~blox/ajax/input.x.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_575283e2055598_74537242',
+  'unifunc' => 'content_577a36b5afb2c6_63700841',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f04ebe7ee85083620977da55dda8c847a119564a' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/~blox/ajax/input.x.tpl',
-      1 => 1465025502,
+      1 => 1467627182,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_575283e2055598_74537242 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577a36b5afb2c6_63700841 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_replace')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/modifier.replace.php';
 ?>
 <div class=" form-group">
@@ -57,8 +57,8 @@ $_smarty_tpl->_assignInScope('name', $_prefixVariable4);
 ?>
       <?php }?>
       -->
-      <div class="input-group col-sm-12">  
-          <span class="input-group-btn " style="width: 150px">
+      <div class="input-group col-sm-12">
+          <span class="input-group-btn hidden-xs" >
               <a id="btn-<?php echo $_smarty_tpl->tpl_vars['_id']->value;?>
 " class="btn btn-alt btn-success btn-block text-left" type="button" onclick="window.config.save(this,{ <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
  : $('#<?php echo $_smarty_tpl->tpl_vars['_id']->value;?>
@@ -148,7 +148,7 @@ _<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
                 >
           <?php }?>
           <span <?php if ($_smarty_tpl->tpl_vars['i']->value['desc']) {?>class="input-group-btn popover-test"
-                            data-placement="left"
+                            data-placement="top"
           data-content="<?php echo $_smarty_tpl->tpl_vars['i']->value['desc'];?>
 " data-original-title="<?php echo $_smarty_tpl->tpl_vars['txt']->value;?>
 "<?php }?>

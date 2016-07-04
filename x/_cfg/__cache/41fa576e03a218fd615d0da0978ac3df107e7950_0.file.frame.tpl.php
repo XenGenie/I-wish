@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 11:54:56
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 12:41:38
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577a3270a7a945_82036282',
+  'unifunc' => 'content_577a3d623bc814_43600706',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41fa576e03a218fd615d0da0978ac3df107e7950' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1467626094,
+      1 => 1467628535,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_577a3270a7a945_82036282 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577a3d623bc814_43600706 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -624,10 +624,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
               animation         : loaderSprite 1s steps(25, end) infinite;
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
               .loader {
                 left              : 35%;
                 top               : 35%;
+              }
+
+              .btn-xs-block{
+                display: block; 
+                width: 100%;
+                margin: 0px 0 10px 0;
               }
 
             }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 11:35:06
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 12:19:47
   from "/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577a2dca628913_48489312',
+  'unifunc' => 'content_577a38430dd2b8_31815401',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c67061afc0b93af8d09bbb6d848de0ea740f438d' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl',
-      1 => 1467624902,
+      1 => 1467627570,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_577a2dca628913_48489312 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577a38430dd2b8_31815401 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="
   col-md-3 col-md-offset-4
@@ -37,9 +37,9 @@ function content_577a2dca628913_48489312 (Smarty_Internal_Template $_smarty_tpl)
             <br/>
             <br/>
             <h5 >
-            Area Secure
-            <i class="fa fa-lock text-success "></i>
-            Please login to continue.
+            <!-- Area Secure -->
+            <!-- <i class="fa fa-lock text-success "></i> -->
+            <!-- Please login to continue. -->
             </h5>
             <!-- <h2><?php echo $_smarty_tpl->tpl_vars['HTTP_HOST']->value;?>
 </h2> -->

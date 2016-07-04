@@ -17,8 +17,6 @@
                         <i class="fa fa-{$x.mini}"></i> 
                     {/if}
                 {/foreach} 
-
-                
             {/if}
         </span>
         <h5 class="text-align-center">  

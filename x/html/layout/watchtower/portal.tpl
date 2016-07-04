@@ -150,8 +150,6 @@
 
                                 </blockquote>
                             </p>
-                            
-                             
                         </div>
                     </div>
                     <div class="col-md-6" data-widgster="restore"> 

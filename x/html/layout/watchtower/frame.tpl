@@ -504,10 +504,16 @@
               animation         : loaderSprite 1s steps(25, end) infinite;
             }
 
-            @media (max-width: 425px) {
+            @media (max-width: 480px) {
               .loader {
                 left              : 35%;
                 top               : 35%;
+              }
+
+              .btn-xs-block{
+                display: block; 
+                width: 100%;
+                margin: 0px 0 10px 0;
               }
 
             }
