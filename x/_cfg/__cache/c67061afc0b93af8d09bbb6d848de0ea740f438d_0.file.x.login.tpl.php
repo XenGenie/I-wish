@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 05:18:38
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 11:35:06
   from "/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_5779d58e3fb186_42695123',
+  'unifunc' => 'content_577a2dca628913_48489312',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c67061afc0b93af8d09bbb6d848de0ea740f438d' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl',
-      1 => 1467602314,
+      1 => 1467624902,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5779d58e3fb186_42695123 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577a2dca628913_48489312 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="col-md-3 col-md-offset-4">
+<div class="
+  col-md-3 col-md-offset-4
+  col-sm-6 col-sm-offset-2
+  col-xs-11
+">
     <section class="widget login-widget">
         <header class="text-align-center">
            <!--  <div class="widget-controls">
