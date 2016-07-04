@@ -26,7 +26,7 @@
 
   $lib = $cfg['dir']['libs'];
 
-  $engine       = "{$lib}/x4deep/xengine.php";
+  echo $engine       = "{$lib}/x4deep/xengine.php";
 
   $firephp      = "{$lib}/firephp/lib/FirePHPCore/FirePHP.class.php";
   
