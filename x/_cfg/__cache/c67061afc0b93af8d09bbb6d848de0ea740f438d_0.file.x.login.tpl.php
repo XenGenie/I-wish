@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 22:56:55
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 23:05:15
   from "/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577acd97abd660_76169680',
+  'unifunc' => 'content_577acf8bcc6191_51789458',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c67061afc0b93af8d09bbb6d848de0ea740f438d' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl',
-      1 => 1467665814,
+      1 => 1467665985,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_577acd97abd660_76169680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577acf8bcc6191_51789458 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="
   col-md-4 col-md-offset-4

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 13:07:40
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 23:06:09
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577a437cc0ff26_54930561',
+  'unifunc' => 'content_577acfc1e8c916_55928646',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41fa576e03a218fd615d0da0978ac3df107e7950' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1467630459,
+      1 => 1467666368,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_577a437cc0ff26_54930561 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577acfc1e8c916_55928646 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -264,7 +264,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
       <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;">
       </iframe> 
     -->
-    <small class="label tile label-sm widget hidden-xs " style="position: fixed; bottom: 0; left: 0; width: 120px;
+    <small class="label tile label-sm widget hidden-xs hidden-sm " style="position: fixed; bottom: 0; left: 0; width: 120px;
         margin: 23px 35px 23px 23px;">
       super powered by
       <br/>
@@ -399,9 +399,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-        <li class="visible-xs">
-            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
-        </li>
+        <!-- <li class="visible-xs"> -->
+        <!--     <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
+        <!-- </li> -->
       </ul>
       <!-- <div id="sidebar-settings" class="settings"> -->
       <!--     <button type="button" -->
@@ -423,6 +423,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                       <i class="fa fa-search"></i>
                   </a>
               </li>
+              <li class="divider"></li>
               <li class="dropdown">
                   <a href="#" title="Messages" id="messages"
                     class="dropdown-toggle"
@@ -532,7 +533,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                       </li>
                   </ul>
               </li>
-              <li class="divider"></li>
               <li class="hidden-xs">
                   <a href="#" id="settings"
                     title="Settings"
@@ -573,6 +573,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                       </li>
                   </ul>
               </li>
+              <li class=" hidden-xs">
+                  <a href="/" data-widgster="fullscreen" title="Full Screen" >
+                      <i class="fa fa-globe"></i>
+                  </a>
+              </li>
+              <li ><a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
+/login/logout"><i class="fa fa-sign-out"></i></a></li>
               <li class="visible-xs">
                   <a href="#"
                     class="btn-navbar"
@@ -582,13 +589,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                       <i class="fa fa-bars"></i>
                   </a>
               </li>
-              <li class=" hidden-xs">
-                  <a href="/" data-widgster="fullscreen" title="Full Screen" >
-                      <i class="fa fa-globe"></i>
-                  </a>
-              </li>
-              <li class="hidden-xs"><a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
-/login/logout"><i class="fa fa-sign-out"></i></a></li>
           </ul>
           <form id="search-form" class="navbar-form pull-right" role="search">
               <input type="search" class="search-query" placeholder="Search...">

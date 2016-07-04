@@ -198,7 +198,7 @@
       <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;">
       </iframe> 
     -->
-    <small class="label tile label-sm widget hidden-xs " style="position: fixed; bottom: 0; left: 0; width: 120px;
+    <small class="label tile label-sm widget hidden-xs hidden-sm " style="position: fixed; bottom: 0; left: 0; width: 120px;
         margin: 23px 35px 23px 23px;">
       super powered by
       <br/>
@@ -305,6 +305,7 @@
                       <i class="fa fa-search"></i>
                   </a>
               </li>
+              <li class="divider"></li>
               <li class="dropdown">
                   <a href="#" title="Messages" id="messages"
                     class="dropdown-toggle"
@@ -414,7 +415,6 @@
                       </li>
                   </ul>
               </li>
-              <li class="divider"></li>
               <li class="hidden-xs">
                   <a href="#" id="settings"
                     title="Settings"
@@ -454,6 +454,12 @@
                       </li>
                   </ul>
               </li>
+              <li class=" hidden-xs">
+                  <a href="/" data-widgster="fullscreen" title="Full Screen" >
+                      <i class="fa fa-globe"></i>
+                  </a>
+              </li>
+              <li ><a href="/{$toBackDoor}/login/logout"><i class="fa fa-sign-out"></i></a></li>
               <li class="visible-xs">
                   <a href="#"
                     class="btn-navbar"
@@ -463,13 +469,6 @@
                       <i class="fa fa-bars"></i>
                   </a>
               </li>
-              <li class=" hidden-xs">
-                  <a href="/" data-widgster="fullscreen" title="Full Screen" >
-                      <i class="fa fa-globe"></i>
-                  </a>
-              </li>
-
-              <li ><a href="/{$toBackDoor}/login/logout"><i class="fa fa-sign-out"></i></a></li>
           </ul>
           <form id="search-form" class="navbar-form pull-right" role="search">
               <input type="search" class="search-query" placeholder="Search...">
