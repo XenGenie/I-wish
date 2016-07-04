@@ -510,13 +510,13 @@
                 left              : 35%;
                 top               : 35%;
               }
-
+            }
+            @media (max-width: 767px) {
               .btn-xs-block{
-                display: block; 
+                display: block;
                 width: 100%;
                 margin: 0px 0 10px 0;
               }
-
             }
         </style>
       </div>
