@@ -1,9 +1,9 @@
 <?php
   /**
    * x.engine.php
-   *
    * Copyright 2014 Xopher Dee P <heylisten@xtiv.net>
    * @TODO: Keep Being Awesome
+   *
    *
    * This program is free software; you can redistribute it and/or modify
    * it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@
    * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
    * MA 02110-1301, USA.
    */
+
   // Ready.
   require("_cfg/lang.cfg");
   require("_cfg/x.cfg");
@@ -35,6 +36,7 @@
 
     // Set
     $X = new Xengine($cfg);
+
     // GO!
     $X->knock();
   }else{
