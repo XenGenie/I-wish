@@ -281,9 +281,9 @@
                 </li> 
             {/if}
         {/foreach}
-        <li class="visible-xs">
-            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
-        </li>
+        <!-- <li class="visible-xs"> -->
+        <!--     <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
+        <!-- </li> -->
       </ul>
       <!-- <div id="sidebar-settings" class="settings"> -->
       <!--     <button type="button" -->
@@ -468,7 +468,8 @@
                       <i class="fa fa-globe"></i>
                   </a>
               </li>
-              <li class="hidden-xs"><a href="/{$toBackDoor}/login/logout"><i class="fa fa-sign-out"></i></a></li>
+
+              <li ><a href="/{$toBackDoor}/login/logout"><i class="fa fa-sign-out"></i></a></li>
           </ul>
           <form id="search-form" class="navbar-form pull-right" role="search">
               <input type="search" class="search-query" placeholder="Search...">

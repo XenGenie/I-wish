@@ -46,7 +46,7 @@
                               <i class="fa fa-mouse-pointer"></i> <u>Click Here</u> to Learn More
                           </a>
                           <!-- <a class="btn btn-success btn-lg " data-widgster="fullscreen"> -->
-                          <a class="btn btn-info btn-lg " href="/{$toBackDoor}/login/profile" data-widgster="restore">
+                          <a class="btn btn-info btn-lg btn-xs-block" href="/{$toBackDoor}/login/profile" data-widgster="restore">
                               <i class="fa fa-arrow-left"></i> Back
                           </a>
 

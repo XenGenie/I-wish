@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 12:19:47
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 22:56:55
   from "/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577a38430dd2b8_31815401',
+  'unifunc' => 'content_577acd97abd660_76169680',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c67061afc0b93af8d09bbb6d848de0ea740f438d' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/X/xLogin/x.login.tpl',
-      1 => 1467627570,
+      1 => 1467665814,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_577a38430dd2b8_31815401 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577acd97abd660_76169680 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="
-  col-md-3 col-md-offset-4
+  col-md-4 col-md-offset-4
   col-sm-6 col-sm-offset-2
   col-xs-11
 ">
@@ -47,7 +47,7 @@ function content_577a38430dd2b8_31815401 (Smarty_Internal_Template $_smarty_tpl)
         <div class="body">
             <form id="box-login" class="" action="/.json" method="POST" onsubmit="return window.login.submit(this);">
                 <fieldset>
-                    <div class="form-group "> 
+                    <div class="form-group ">
                         <!-- <label for="password" >ID</label> -->
                         <div class="input-group input-group-lg">
                                 <span class="input-group-addon">
@@ -57,7 +57,7 @@ function content_577a38430dd2b8_31815401 (Smarty_Internal_Template $_smarty_tpl)
                                    placeholder="<?php if (!$_smarty_tpl->tpl_vars['SUPER_ADMIN']->value) {?>Alias<?php } else { ?>Alias or Email<?php }?>">
                         </div>
                     </div>
-                    <div class="form-group"> 
+                    <div class="form-group">
                         <!-- <label for="password" >Password</label> -->
                         <div class="input-group input-group-lg">
                                 <span class="input-group-addon">
@@ -67,7 +67,7 @@ function content_577a38430dd2b8_31815401 (Smarty_Internal_Template $_smarty_tpl)
                                    placeholder="Enter your pass key">
                         </div>
                     <?php if ($_smarty_tpl->tpl_vars['SUPER_ADMIN']->value === false) {?>
-                     
+                    
                         <div class="input-group input-group-lg">
                                 <span class="input-group-addon">
                                     <i class="fa fa-lock"></i>

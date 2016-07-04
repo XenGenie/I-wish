@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 12:43:13
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 22:09:59
   from "/home/xopher/www/superdomx.com/x/html/watchtower/portal.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577a3dc13b9f13_66782999',
+  'unifunc' => 'content_577ac297aee811_62654699',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e23266bb4faa046e79f129cf13ce11cf44a1aa4' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/watchtower/portal.tpl',
-      1 => 1467628990,
+      1 => 1467662963,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~widgets/col.tpl' => 1,
   ),
 ),false)) {
-function content_577a3dc13b9f13_66782999 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577ac297aee811_62654699 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <div class="row widget-container">
@@ -105,7 +105,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                               <i class="fa fa-mouse-pointer"></i> <u>Click Here</u> to Learn More
                           </a>
                           <!-- <a class="btn btn-success btn-lg " data-widgster="fullscreen"> -->
-                          <a class="btn btn-info btn-lg " href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
+                          <a class="btn btn-info btn-lg btn-xs-block" href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
 /login/profile" data-widgster="restore">
                               <i class="fa fa-arrow-left"></i> Back
                           </a>
