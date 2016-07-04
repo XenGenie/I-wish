@@ -26,10 +26,10 @@
 
   $lib = $cfg['dir']['libs'];
 
-  echo $engine   = "{$lib}/x4deep/xengine.php";
+  $engine   = "{$lib}/x4deep/xengine.php";
 
-  echo $firephp  = "{$lib}/firephp/lib/FirePHPCore/FirePHP.class.php";
-exit;
+  $firephp  = "{$lib}/firephp/lib/FirePHPCore/FirePHP.class.php";
+
   if( is_dir($lib) && is_dir($cfg['dir']['Xtra'])  && is_file($engine) ){
     require($engine);
     require($firephp);
@@ -39,8 +39,7 @@ exit;
     // GO!
     $X->knock();
   }else{
-    
-    
+    echo "Directory not found";
 
     require "{$lib}/install.php";
   }
