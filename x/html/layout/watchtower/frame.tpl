@@ -8,9 +8,10 @@
     </title>
     <!-- <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">    -->
     <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
+    <link rel="stylesheet" href="/bin/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="/bin/css/darkly.bootstrap.css"> -->
     <link rel="stylesheet" href="/bin/css/jetblack.bootstrap.css">
     <link href="/x/html/layout/watchtower/css/application.css" rel="stylesheet">
-    <link rel="stylesheet" href="/bin/css/font-awesome.css">
 
     <link href='//fonts.googleapis.com/css?family=Geo|Righteous|Allerta' rel='stylesheet' type='text/css'> 
     <!-- <link href="/x/html/layout/watchtower/css/application.min.css" rel="stylesheet"> -->

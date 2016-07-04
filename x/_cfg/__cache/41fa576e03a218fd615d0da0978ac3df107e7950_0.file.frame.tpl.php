@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 12:41:38
+/* Smarty version 3.1.30-dev/72, created on 2016-07-04 13:07:40
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577a3d623bc814_43600706',
+  'unifunc' => 'content_577a437cc0ff26_54930561',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41fa576e03a218fd615d0da0978ac3df107e7950' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1467628535,
+      1 => 1467630459,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_577a3d623bc814_43600706 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577a437cc0ff26_54930561 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -38,9 +38,10 @@ if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/supe
     </title>
     <!-- <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">    -->
     <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
+    <link rel="stylesheet" href="/bin/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="/bin/css/darkly.bootstrap.css"> -->
     <link rel="stylesheet" href="/bin/css/jetblack.bootstrap.css">
     <link href="/x/html/layout/watchtower/css/application.css" rel="stylesheet">
-    <link rel="stylesheet" href="/bin/css/font-awesome.css">
 
     <link href='//fonts.googleapis.com/css?family=Geo|Righteous|Allerta' rel='stylesheet' type='text/css'> 
     <!-- <link href="/x/html/layout/watchtower/css/application.min.css" rel="stylesheet"> -->
