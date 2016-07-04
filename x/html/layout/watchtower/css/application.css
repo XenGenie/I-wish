@@ -25126,7 +25126,7 @@ table.table thead .sorting_desc_disabled {
 }
 
 .login-widget, .registration-widget {
-  width: 350px;
+  width: 100%;
   padding-bottom: 0;
 }
 
