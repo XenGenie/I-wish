@@ -225,9 +225,9 @@
             <style>
             .fa-spin { -webkit-filter: blur(0); }
             </style>
-            <i class="fa fa-home"></i>
+            <i class="fa fa-dashboard"></i>
             <span class="name">
-              Welcome
+              Dashboard
             </span>
           </a>
         </li>
