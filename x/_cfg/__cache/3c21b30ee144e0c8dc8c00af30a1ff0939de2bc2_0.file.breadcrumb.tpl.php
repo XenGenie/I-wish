@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-05 04:40:01
+/* Smarty version 3.1.30-dev/72, created on 2016-07-05 06:11:35
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/breadcrumb.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577b1e01bd3711_47648843',
+  'unifunc' => 'content_577b3377306ec7_68416816',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3c21b30ee144e0c8dc8c00af30a1ff0939de2bc2' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/breadcrumb.tpl',
-      1 => 1467686399,
+      1 => 1467691871,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_577b1e01bd3711_47648843 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577b3377306ec7_68416816 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ol class="breadcrumb">
   <!-- <li><a href="/x" onclick="return false;" target="_blank"><i class="fa fa-globe"></i> www</a></li> -->
@@ -63,7 +63,7 @@ if ($_smarty_tpl->tpl_vars['xtra']->value['icon'] && "x".$_prefixVariable1 == $_
         <?php if ($_smarty_tpl->tpl_vars['method']->value == 'index') {?> 
         </li>
         <?php } else { ?>
-            <li class="active ">
+            <li class="active btn btn-lg btn-transparent">
                 <a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['Xtra']->value;?>
 /<?php echo $_smarty_tpl->tpl_vars['method']->value;?>

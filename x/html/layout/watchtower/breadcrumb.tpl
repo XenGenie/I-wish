@@ -21,7 +21,7 @@
         {if $method == 'index'} 
         </li>
         {else}
-            <li class="active ">
+            <li class="active btn btn-lg btn-transparent">
                 <a href="/{$toBackDoor}/{$Xtra}/{$method}" class=""><i class="fa fa-{$Xtra}-{$method}"> {$method|ucfirst}</i>
             </a>
         {/if}
