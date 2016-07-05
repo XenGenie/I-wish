@@ -194,8 +194,8 @@
     </STYLE>
   </head>
   <body class="background-dark">
-      <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;">
-      </iframe> 
+      <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"> -->
+      <!-- </iframe>  -->
     <small class="label tile label-sm widget hidden-xs hidden-sm " style="position: fixed; bottom: 0; left: 0; width: 120px;
         margin: 23px 35px 23px 23px;">
       super powered by
@@ -452,11 +452,11 @@
                       </li>
                   </ul>
               </li>
-              <li class=" hidden-xs">
-                  <a href="/" data-widgster="fullscreen" title="Full Screen" >
-                      <i class="fa fa-globe"></i>
-                  </a>
-              </li>
+              <!-- <li class=" hidden-xs"> -->
+              <!--     <a href="/" data-widgster="fullscreen" title="Full Screen" > -->
+              <!--         <i class="fa fa-globe"></i> -->
+              <!--     </a> -->
+              <!-- </li> -->
               <li ><a href="/{$toBackDoor}/login/logout"><i class="fa fa-sign-out"></i></a></li>
               <li class="visible-xs">
                   <a href="#"

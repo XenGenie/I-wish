@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-05 04:22:16
+/* Smarty version 3.1.30-dev/72, created on 2016-07-05 04:33:43
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577b19d83412c1_04213645',
+  'unifunc' => 'content_577b1c87359fb0_29140497',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '41fa576e03a218fd615d0da0978ac3df107e7950' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1467685333,
+      1 => 1467686021,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_577b19d83412c1_04213645 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577b1c87359fb0_29140497 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -260,8 +260,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     </STYLE>
   </head>
   <body class="background-dark">
-      <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;">
-      </iframe> 
+      <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"> -->
+      <!-- </iframe>  -->
     <small class="label tile label-sm widget hidden-xs hidden-sm " style="position: fixed; bottom: 0; left: 0; width: 120px;
         margin: 23px 35px 23px 23px;">
       super powered by
@@ -571,11 +571,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                       </li>
                   </ul>
               </li>
-              <li class=" hidden-xs">
-                  <a href="/" data-widgster="fullscreen" title="Full Screen" >
-                      <i class="fa fa-globe"></i>
-                  </a>
-              </li>
+              <!-- <li class=" hidden-xs"> -->
+              <!--     <a href="/" data-widgster="fullscreen" title="Full Screen" > -->
+              <!--         <i class="fa fa-globe"></i> -->
+              <!--     </a> -->
+              <!-- </li> -->
               <li ><a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
 /login/logout"><i class="fa fa-sign-out"></i></a></li>
               <li class="visible-xs">
