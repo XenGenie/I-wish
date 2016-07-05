@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-04 22:09:59
+/* Smarty version 3.1.30-dev/72, created on 2016-07-05 08:11:11
   from "/home/xopher/www/superdomx.com/x/html/watchtower/portal.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577ac297aee811_62654699',
+  'unifunc' => 'content_577b4f7f620611_81404426',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e23266bb4faa046e79f129cf13ce11cf44a1aa4' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/watchtower/portal.tpl',
-      1 => 1467662963,
+      1 => 1467699024,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~widgets/col.tpl' => 1,
   ),
 ),false)) {
-function content_577ac297aee811_62654699 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577b4f7f620611_81404426 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <div class="row widget-container">
@@ -68,6 +68,12 @@ echo $_smarty_tpl->tpl_vars['Xtra']->value;?>
                   ><i class="glyphicon glyphicon-remove"></i></a>
               <?php }?>
           </div>
+          <!--
+            <?php if (isset($_smarty_tpl->tpl_vars['_GET']->value['anchor'])) {?>
+              <?php $_smarty_tpl->_assignInScope('anchor', $_smarty_tpl->tpl_vars['_GET']->value['anchor']);
+?>
+            <?php }?>
+          -->
           <div class="jumbotron handle">
             <div class="container">
               <div id="carousel-watchtower" class="carousel slide">
@@ -96,6 +102,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                       <h1>
                         <!-- <img src="/users/avatar" style="max-height: 200px; border-radius: 1000px;" class="pull-left"/> -->
                           Welcome
+                          <?php echo $_smarty_tpl->tpl_vars['_GET']->value['anchor'];?>
+
                       </h1>
                       <p>
                         This area is your's to do with what ever you'd like.
@@ -182,12 +190,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 </div>
               </div>
             </div>
-                <a class="left carousel-control" href="#carousel-watchtower" data-slide="prev">
-                    <i class="glyphicon glyphicon-chevron-left"></i>
-                </a>
-                <a class="right carousel-control" href="#carousel-watchtower" data-slide="next">
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </a>
+            <a class="left carousel-control" href="#carousel-watchtower" data-slide="prev">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+            <a class="right carousel-control" href="#carousel-watchtower" data-slide="next">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+            </a>
           </div>
       </section>
     </div>

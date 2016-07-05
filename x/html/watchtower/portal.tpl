@@ -20,6 +20,11 @@
                   ><i class="glyphicon glyphicon-remove"></i></a>
               {/if}
           </div>
+          <!--
+            {if isset($_GET.anchor)}
+              {$anchor = $_GET.anchor}
+            {/if}
+          -->
           <div class="jumbotron handle">
             <div class="container">
               <div id="carousel-watchtower" class="carousel slide">
@@ -37,6 +42,7 @@
                       <h1>
                         <!-- <img src="/users/avatar" style="max-height: 200px; border-radius: 1000px;" class="pull-left"/> -->
                           Welcome
+                          {$_GET.anchor}
                       </h1>
                       <p>
                         This area is your's to do with what ever you'd like.
@@ -96,12 +102,12 @@
                 </div>
               </div>
             </div>
-                <a class="left carousel-control" href="#carousel-watchtower" data-slide="prev">
-                    <i class="glyphicon glyphicon-chevron-left"></i>
-                </a>
-                <a class="right carousel-control" href="#carousel-watchtower" data-slide="next">
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </a>
+            <a class="left carousel-control" href="#carousel-watchtower" data-slide="prev">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+            </a>
+            <a class="right carousel-control" href="#carousel-watchtower" data-slide="next">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+            </a>
           </div>
       </section>
     </div>
