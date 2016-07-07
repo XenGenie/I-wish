@@ -44,7 +44,7 @@
                       </h1>
                       <p>
                           <span data-widgster="fullscreen">
-                            Maximize production, customize your dashboard.
+                            Customize Your Super Powered Dashboard.
                           </span>
                           <br/>
                           <br/>

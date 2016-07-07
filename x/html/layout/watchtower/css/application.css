@@ -22638,7 +22638,7 @@ a.text-gray-lighter:focus {
 }
 
 .page-header .nav > li > a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255,255,255,0.75);
   width: 40px;
   padding: 0;
   font-size: 19.5px;
