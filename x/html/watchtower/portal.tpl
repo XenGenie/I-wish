@@ -40,24 +40,25 @@
                 <div class="carousel-inner text-align-center">
                     <div class="item {if $anchor == 'index'}active{/if}">
                       <h1>
-                        <!-- <img src="/users/avatar" style="max-height: 200px; border-radius: 1000px;" class="pull-left"/> -->
-                          Welcome
-                          {$_GET.anchor}
+                        Dashboard
                       </h1>
                       <p>
-                        This area is your's to do with what ever you'd like.
-                                      <br/>
-                                      <br/>
+                          <span data-widgster="fullscreen">
+                            Maximize production, customize your dashboard.
+                          </span>
+                          <br/>
+                          <br/>
                           <a class="btn btn-success btn-lg"  data-widgster="fullscreen" >
-                              <i class="fa fa-mouse-pointer"></i> <u>Click Here</u> to Learn More
+                            <i class="fa fa-graduation-cap"></i> 
+                            Learn More
                           </a>
                           <!-- <a class="btn btn-success btn-lg " data-widgster="fullscreen"> -->
-                          <a class="btn btn-info btn-lg btn-xs-block" href="/{$toBackDoor}/login/profile" data-widgster="restore">
+                          <a class="btn btn-info btn-lg btn-xs-block btn-block" href="/{$toBackDoor}/login/profile" data-widgster="restore">
                               <i class="fa fa-arrow-left"></i> Back
                           </a>
-
                           <p data-widgster="restore">
-                              Normally, there would be some more content here to describe what was just said above. Coming soon...
+                            The Dashboard is your's to control. Easily add any element to your dashboard by clicking on its
+                            <i class="fa fa-eye"></i> icon
                           </p>
                       </p>
                     </div>

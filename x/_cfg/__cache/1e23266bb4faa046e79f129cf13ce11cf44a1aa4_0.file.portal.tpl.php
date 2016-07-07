@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-05 08:11:11
+/* Smarty version 3.1.30-dev/72, created on 2016-07-07 05:31:54
   from "/home/xopher/www/superdomx.com/x/html/watchtower/portal.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577b4f7f620611_81404426',
+  'unifunc' => 'content_577dcd2a0dcf93_97411296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e23266bb4faa046e79f129cf13ce11cf44a1aa4' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/watchtower/portal.tpl',
-      1 => 1467699024,
+      1 => 1467862308,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~widgets/col.tpl' => 1,
   ),
 ),false)) {
-function content_577b4f7f620611_81404426 (Smarty_Internal_Template $_smarty_tpl) {
+function content_577dcd2a0dcf93_97411296 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <div class="row widget-container">
@@ -100,26 +100,26 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 <div class="carousel-inner text-align-center">
                     <div class="item <?php if ($_smarty_tpl->tpl_vars['anchor']->value == 'index') {?>active<?php }?>">
                       <h1>
-                        <!-- <img src="/users/avatar" style="max-height: 200px; border-radius: 1000px;" class="pull-left"/> -->
-                          Welcome
-                          <?php echo $_smarty_tpl->tpl_vars['_GET']->value['anchor'];?>
-
+                        Dashboard
                       </h1>
                       <p>
-                        This area is your's to do with what ever you'd like.
-                                      <br/>
-                                      <br/>
+                          <span data-widgster="fullscreen">
+                            Maximize production, customize your dashboard.
+                          </span>
+                          <br/>
+                          <br/>
                           <a class="btn btn-success btn-lg"  data-widgster="fullscreen" >
-                              <i class="fa fa-mouse-pointer"></i> <u>Click Here</u> to Learn More
+                            <i class="fa fa-graduation-cap"></i> 
+                            Learn More
                           </a>
                           <!-- <a class="btn btn-success btn-lg " data-widgster="fullscreen"> -->
-                          <a class="btn btn-info btn-lg btn-xs-block" href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
+                          <a class="btn btn-info btn-lg btn-xs-block btn-block" href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
 /login/profile" data-widgster="restore">
                               <i class="fa fa-arrow-left"></i> Back
                           </a>
-
                           <p data-widgster="restore">
-                              Normally, there would be some more content here to describe what was just said above. Coming soon...
+                            The Dashboard is your's to control. Easily add any element to your dashboard by clicking on its
+                            <i class="fa fa-eye"></i> icon
                           </p>
                       </p>
                     </div>
