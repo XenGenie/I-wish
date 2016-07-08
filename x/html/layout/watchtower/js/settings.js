@@ -81,6 +81,7 @@ $(function(){
     displaySidebar(settingsState.displaySidebar, false);
 
     if (!$settings[0]){
+      alert('no settings');
         return;
     }
 

@@ -1,10 +1,8 @@
 $(function(){
     function pageLoad(){
         nv.addGraph(function() {
-
             // $.ajax({
             //     url : './analytics/index/90/.json',
-
             //     type: "POST", 
             //     dataType: 'json',
             //     success:function(data, textStatus, jqXHR){

@@ -247,6 +247,6 @@ $(function(){
         initDataTables();
     }
 
-    // pageLoad();
+    pageLoad();
     PjaxApp.onPageLoad(pageLoad);
 });
