@@ -121,6 +121,8 @@ $(function(){
     }
 
     pageLoad();
+    $(".popover-test").popover();
+    $(".tooltip-test").tooltip();
 
     PjaxApp.onPageLoad(pageLoad);
 });

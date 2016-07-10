@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-08 06:32:25
+/* Smarty version 3.1.30-dev/72, created on 2016-07-10 08:21:19
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577f2cd9f27199_68700514',
+  'unifunc' => 'content_5781e95f437549_37125590',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'faf89cc76884ee3912202b6f0b46758bee4a2119' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1467952339,
+      1 => 1468131676,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_577f2cd9f27199_68700514 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5781e95f437549_37125590 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -39,6 +39,9 @@ if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/supe
     <!-- <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">    -->
     <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
     <link rel="stylesheet" href="/bin/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="/bin/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="/bin/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="/bin/css/bootstrap-theme.css"> -->
     <!-- <link rel="stylesheet" href="/bin/css/darkly.bootstrap.css"> -->
     <link rel="stylesheet" href="/bin/css/jetblack.bootstrap.css">
     <link href="/x/html/layout/watchtower/css/application.css" rel="stylesheet">
@@ -152,7 +155,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 font-size: 200%;  
           }
           .bg-host{
-              font-size: 400%;
+              /* font-size: 400%; */
           }
       }
       @media screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) { 
@@ -169,7 +172,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
                 font-size: 300%;  
           }
           .bg-host{
-              font-size: 333%;
+              /* font-size: 333%; */
           }
       }
 
@@ -283,6 +286,12 @@ src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
     </div>
     <nav id="sidebar" class="sidebar nav-collapse collapse">
       <ul id="side-nav" class="side-nav">
+        <li class="visible-xs" >
+          <h3 class="name text-center">
+            <?php echo $_smarty_tpl->tpl_vars['HTTP_HOST']->value;?>
+
+          </h3>
+        </li>
         <li class="active">
           <a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
 "
@@ -291,7 +300,7 @@ src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
           >
             <!-- <img src="/users/avatar" class="fa" height="16px" align="absmiddle" style="border-radius: 50px;" /> -->
             <style>
-            .fa-spin { -webkit-filter: blur(0); }
+              .fa-spin { -webkit-filter: blur(0); }
             </style>
             <i class="fa fa-dashboard"></i>
             <span class="name">
@@ -306,43 +315,40 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['item']->value) {
 ?>
-            <?php $_smarty_tpl->_assignInScope('children', 0);
+          <?php $_smarty_tpl->_assignInScope('children', 0);
 ?>
-
-            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['xtras']->value, 'xtra', false, 'x');
+          <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['xtraz']->value, 'xtra', false, 'x');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['x']->value => $_smarty_tpl->tpl_vars['xtra']->value) {
 ?>
-                <?php if ($_smarty_tpl->tpl_vars['xtra']->value['icon'] && $_smarty_tpl->tpl_vars['key']->value == $_smarty_tpl->tpl_vars['xtra']->value['see'] && ($_smarty_tpl->tpl_vars['xtra']->value['alpha'] == true || $_smarty_tpl->tpl_vars['xtra']->value['beta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['delta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['omega'] == true)) {?>
-                    <?php $_smarty_tpl->_assignInScope('children', 1);
+              <?php if ($_smarty_tpl->tpl_vars['xtra']->value['icon'] && $_smarty_tpl->tpl_vars['key']->value == $_smarty_tpl->tpl_vars['xtra']->value['see'] && ($_smarty_tpl->tpl_vars['xtra']->value['alpha'] == true || $_smarty_tpl->tpl_vars['xtra']->value['beta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['delta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['omega'] == true)) {?>
+                  <?php $_smarty_tpl->_assignInScope('children', 1);
 ?>
-                <?php }?>
-            <?php
+              <?php }?>
+          <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-
-
-            <?php if ($_smarty_tpl->tpl_vars['key']->value && $_smarty_tpl->tpl_vars['children']->value > 0) {?>  
-                <li class="panel">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse"
-                      data-parent="#side-nav" href="#<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+          <?php if ($_smarty_tpl->tpl_vars['key']->value && $_smarty_tpl->tpl_vars['children']->value > 0) {?>
+            <li class="panel">
+              <a class="accordion-toggle collapsed" data-toggle="collapse"
+                data-parent="#side-nav" href="#<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
 -collapse" onclick="$($('.carousel-indicators li')[<?php echo smarty_function_counter(array(),$_smarty_tpl);?>
 ]).click()"><i class="fa fa-3x fa-<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
 "></i><span class="name"><?php echo ucfirst($_smarty_tpl->tpl_vars['item']->value['area']);?>
 </span></a>
-                    <ul id="<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+              <ul id="<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
 -collapse" class="panel-collapse collapse"> 
-                        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['xtras']->value, 'xtra', false, 'x');
+                  <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['xtraz']->value, 'xtra', false, 'x');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['x']->value => $_smarty_tpl->tpl_vars['xtra']->value) {
 ?>
-                            <?php if ($_smarty_tpl->tpl_vars['xtra']->value['icon'] && $_smarty_tpl->tpl_vars['key']->value == $_smarty_tpl->tpl_vars['xtra']->value['see']) {?>
-                                <!-- <img src="<?php echo $_smarty_tpl->tpl_vars['ICON']->value[48];
+                      <?php if ($_smarty_tpl->tpl_vars['xtra']->value['icon'] && $_smarty_tpl->tpl_vars['key']->value == $_smarty_tpl->tpl_vars['xtra']->value['see']) {?>
+                          <!-- <img src="<?php echo $_smarty_tpl->tpl_vars['ICON']->value[48];
 echo $_smarty_tpl->tpl_vars['xtra']->value['icon'];?>
 " desc="<?php echo $_smarty_tpl->tpl_vars['xtra']->value['desc'];?>
 " link="<?php echo $_smarty_tpl->tpl_vars['xtra']->value['link'];?>
@@ -350,46 +356,46 @@ echo $_smarty_tpl->tpl_vars['xtra']->value['icon'];?>
 " icon="<?php echo $_smarty_tpl->tpl_vars['xtra']->value['icon'];?>
 " title="<?php echo $_smarty_tpl->tpl_vars['xtra']->value['name'];?>
 ">  --> 
-                                <?php if ($_smarty_tpl->tpl_vars['xtra']->value['alpha'] || $_smarty_tpl->tpl_vars['xtra']->value['beta'] || $_smarty_tpl->tpl_vars['xtra']->value['delta'] || $_smarty_tpl->tpl_vars['xtra']->value['omega']) {?>
-                                    <li> 
-                                        <a href="/x/<?php echo $_smarty_tpl->tpl_vars['xtra']->value['link'];?>
+                          <?php if ($_smarty_tpl->tpl_vars['xtra']->value['alpha'] || $_smarty_tpl->tpl_vars['xtra']->value['beta'] || $_smarty_tpl->tpl_vars['xtra']->value['delta'] || $_smarty_tpl->tpl_vars['xtra']->value['omega']) {?>
+                              <li> 
+                                  <a href="/x/<?php echo $_smarty_tpl->tpl_vars['xtra']->value['link'];?>
 " title="<?php echo $_smarty_tpl->tpl_vars['xtra']->value['desc'];?>
 "
-                                          data-placement="top" 
-                                          data-original-title="<?php echo $_smarty_tpl->tpl_vars['xtra']->value['desc'];?>
+                                    data-placement="top" 
+                                    data-original-title="<?php echo $_smarty_tpl->tpl_vars['xtra']->value['desc'];?>
 "
-                                          data-toggle="collapse"
-                                          data-target=".sidebar"
-                                        > 
-                                        <i class="fa fa-2x fa-<?php echo $_smarty_tpl->tpl_vars['xtra']->value['mini'];?>
+                                    data-toggle="collapse"
+                                    data-target=".sidebar"
+                                  > 
+                                  <i class="fa fa-2x fa-<?php echo $_smarty_tpl->tpl_vars['xtra']->value['mini'];?>
 "></i>
-                                        <span><?php echo $_smarty_tpl->tpl_vars['xtra']->value['name'];?>
+                                  <span><?php echo $_smarty_tpl->tpl_vars['xtra']->value['name'];?>
 </span>
-                                        </a>
-                                        <!-- <?php if ($_smarty_tpl->tpl_vars['xtra']->value['alpha']) {?>
-                                            <span class="label label-danger">&alpha;</span>
-                                        <?php }?>
-                                        <?php if ($_smarty_tpl->tpl_vars['xtra']->value['beta']) {?>
-                                            <span class="label label-warning">&beta;</span>
-                                        <?php }?>
-                                        <?php if ($_smarty_tpl->tpl_vars['xtra']->value['delta']) {?>
-                                            <span class="label label-success">&Delta;</span>
-                                        <?php }?>
-                                        <?php if ($_smarty_tpl->tpl_vars['xtra']->value['omega']) {?>
-                                            <span class="label label-primary">&Omega;</span>
-                                        <?php }?> -->
-                                    </li>
-                                <?php }?>
-                            <?php }?>
-                        <?php
+                                  </a>
+                                  <!-- <?php if ($_smarty_tpl->tpl_vars['xtra']->value['alpha']) {?>
+                                      <span class="label label-danger">&alpha;</span>
+                                  <?php }?>
+                                  <?php if ($_smarty_tpl->tpl_vars['xtra']->value['beta']) {?>
+                                      <span class="label label-warning">&beta;</span>
+                                  <?php }?>
+                                  <?php if ($_smarty_tpl->tpl_vars['xtra']->value['delta']) {?>
+                                      <span class="label label-success">&Delta;</span>
+                                  <?php }?>
+                                  <?php if ($_smarty_tpl->tpl_vars['xtra']->value['omega']) {?>
+                                      <span class="label label-primary">&Omega;</span>
+                                  <?php }?> -->
+                              </li>
+                          <?php }?>
+                      <?php }?>
+                  <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-                    </ul>
-                </li> 
-            <?php }?>
+              </ul>
+            </li> 
+          <?php }?>
         <?php
 }
 }
@@ -414,189 +420,236 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     <div class="wrap">
       <header class="page-header">
         <div class="navbar">
-          <ul class="nav navbar-nav navbar-right pull-left">
-              <li class="visible-xs">
-                <a href="#"
-                  class="btn-navbar"
-                  data-toggle="collapse"
-                  data-target=".sidebar"
-                  title="">
-                    <i class="fa fa-bars"></i>
-                </a>
-              </li>
-              <li class="visible-xs divider"></li>
-              <li class="dropdown">
-                  <a href="#" title="Account" id="account"
-                    class="dropdown-toggle"
-                    data-toggle="dropdown">
-                      <i class="fa fa-user"></i>
-                  </a>
-                  <ul id="account-menu" class="dropdown-menu account" role="menu">
-                      <li role="presentation" class="account-picture">
-                          <!-- <img src="/users/avatar" class="img-circle" alt=""> -->
-                          <?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
-
-                      </li>
-                      <li role="presentation">
-                          <a href="form_account.html" class="link">
-                              <i class="fa fa-user"></i>
-                              Profile
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="component_calendar.html" class="link">
-                              <i class="fa fa-calendar"></i>
-                              Calendar
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="link">
-                              <i class="fa fa-inbox"></i>
-                              Inbox
-                          </a>
-                      </li>
-                  </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" title="Messages" id="messages"
+          <ul class="nav navbar-nav navbar-left pull-left">
+            <li class="visible-xs">
+              <a href="#"
+                class="btn-navbar"
+                data-toggle="collapse"
+                data-target=".sidebar"
+                title="">
+                  <i class="fa fa-bars"></i>
+              </a>
+            </li>
+            <li class="visible-xs divider"></li>
+            <li class="dropdown">
+                <a href="#" title="8 Notifications"
                   class="dropdown-toggle"
                   data-toggle="dropdown">
-                    <i class="fa fa-comments-o"></i>
+                    <i class="fa fa-bell-o"></i>
+                    <span class="count">8</span>
                 </a>
-                <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                <ul id="support-menu" class="dropdown-menu support" role="menu">
                     <li role="presentation">
-                        <a href="#" class="message">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="fa fa-bell-o"></i></span>
+                            </div>
                             <div class="details">
-                                <div class="sender">Jane Hew</div>
-                                <div class="text">
-                                    Hey, John! How is it going? ...
-                                </div>
+                                Check out this awesome ticket
                             </div>
                         </a>
                     </li>
                     <li role="presentation">
-                        <a href="#" class="message">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
+                            </div>
                             <div class="details">
-                                <div class="sender">Alies Rumiancaŭ</div>
-                                <div class="text">
-                                    I'll definitely buy this template
-                                </div>
+                                "What is the best way to get ...
                             </div>
                         </a>
                     </li>
                     <li role="presentation">
-                        <a href="#" class="message">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-success"><i class="fa fa-tag"></i></span>
+                            </div>
                             <div class="details">
-                                <div class="sender">Michał Rumiancaŭ</div>
-                                <div class="text">
-                                    Is it really Lore ipsum? Lore ...
-                                </div>
+                                This is just a simple notification
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-info"><i class="fa fa-info-circle"></i></span>
+                            </div>
+                            <div class="details">
+                                12 new orders has arrived today
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="fa fa-plus"></i></span>
+                            </div>
+                            <div class="details">
+                                One more thing that just happened
                             </div>
                         </a>
                     </li>
                     <li role="presentation">
                         <a href="#" class="text-align-center see-all">
-                            See all messages <i class="fa fa-arrow-right"></i>
+                            See all tickets <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                 </ul>
-              </li>
-              <li class="dropdown">
-                  <a href="#" title="8 Notifications"
-                    class="dropdown-toggle"
-                    data-toggle="dropdown">
-                      <i class="fa fa-exclamation"></i>
-                      <span class="count">8</span>
-                  </a>
-                  <ul id="support-menu" class="dropdown-menu support" role="menu">
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-important"><i class="fa fa-bell-o"></i></span>
-                              </div>
-                              <div class="details">
-                                  Check out this awesome ticket
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
-                              </div>
-                              <div class="details">
-                                  "What is the best way to get ...
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-success"><i class="fa fa-tag"></i></span>
-                              </div>
-                              <div class="details">
-                                  This is just a simple notification
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-info"><i class="fa fa-info-circle"></i></span>
-                              </div>
-                              <div class="details">
-                                  12 new orders has arrived today
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-important"><i class="fa fa-plus"></i></span>
-                              </div>
-                              <div class="details">
-                                  One more thing that just happened
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="text-align-center see-all">
-                              See all tickets <i class="fa fa-arrow-right"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </li>
-              <li class="divider hidden-xs"></li>
-              <li class="hidden-xs">
-                <a href="#" id="settings"
-                  title="Settings"
-                  data-toggle="popover"
-                  data-placement="bottom">
-                    <i class="fa fa-sliders"></i>
-                </a>
-              </li>
-              <li ><a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
-/login/logout"><i class="fa fa-power-off"></i></a></li>
-              <!-- <li class=" hidden-xs"> -->
-              <!--     <a href="/" data-widgster="fullscreen" title="Full Screen" > -->
-              <!--         <i class="fa fa-globe"></i> -->
-              <!--     </a> -->
-              <!-- </li> -->
-              <li class="visible-phone-landscape">
-                <a href="#" id="search-toggle">
-                  <i class="fa fa-search"></i>
-                </a>
-              </li>
+            </li>
           </ul>
-          <form id="search-form" class="navbar-form pull-right" role="search">
-              <input type="search" class="search-query" placeholder="What is your command...?">
-          </form>
-          <div class="logo text-center hidden-xs pull-right">
+          <div class="logo text-center hidden-xs pull-left">
             <h4  class="bg-host">
               <?php echo $_smarty_tpl->tpl_vars['HTTP_HOST']->value;?>
 
             </h4>
           </div>
+          <ul class="nav navbar-nav navbar-left pull-left ">
+            <li class="hidden-xs">
+              <a href="#" id="settings"
+                title="Settings"
+                data-toggle="popover"
+                data-placement="bottom">
+                  <i class="fa fa-sliders"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right pull-right">
+            <li class="dropdown">
+              <a href="#" title="Account" id="account"
+                class="dropdown-toggle"
+                data-toggle="dropdown">
+                  <i class="fa fa-user"></i>
+              </a>
+              <ul id="account-menu" class="dropdown-menu account" role="menu">
+                <li role="presentation" class="account-picture">
+                    <!-- <img src="/users/avatar" class="img-circle" alt=""> -->
+                    <b>
+                      <?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+
+                    </b>
+                </li>
+                <li role="presentation">
+                    <a href="form_account.html" class="link">
+                        <i class="fa fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="component_calendar.html" class="link">
+                        <i class="fa fa-calendar"></i>
+                        Calendar
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#" class="link">
+                        <i class="fa fa-inbox"></i>
+                        Messages 
+                    </a>
+                </li>
+                <li ><a href="/<?php echo $_smarty_tpl->tpl_vars['toBackDoor']->value;?>
+/login/logout"><i class="fa fa-power-off"></i> Log Out</a></li>
+              </ul>
+            </li>
+            <li class="dropdown visible-xs">
+              <a href="#" title="Messages" id="messages"
+                class="dropdown-toggle"
+                data-toggle="dropdown">
+                  <i class="fa fa-comments-o"></i>
+              </a>
+              <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                  <li role="presentation">
+                    <a href="#" class="message">
+                      <div class="details">
+                        <div class="sender">Jane Hew</div>
+                        <div class="text">
+                            Hey, John! How is it going? ...
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                        <div class="details">
+                          <div class="sender">Alies Rumiancaŭ</div>
+                          <div class="text">
+                              I'll definitely buy this template
+                          </div>
+                        </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                          <div class="details">
+                              <div class="sender">Michał Rumiancaŭ</div>
+                              <div class="text">
+                                  Is it really Lore ipsum? Lore ...
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="text-align-center see-all">
+                          See all messages <i class="fa fa-arrow-right"></i>
+                      </a>
+                  </li>
+              </ul>
+            </li>
+            <li class="visible-phone-landscape">
+              <a href="#" id="search-toggle">
+                <i class="fa fa-search"></i>
+              </a>
+            </li>
+            <!-- <li class="divider hidden-xs"></li> -->
+          </ul>
+          <form id="search-form" class="navbar-form pull-right" role="search">
+              <input type="search" class="search-query" placeholder="What is your command...?">
+          </form>
+          <ul class="nav navbar-nav navbar-right pull-right hidden-xs">
+            <li class="dropdown">
+              <a href="#" title="Messages" id="messages"
+                class="dropdown-toggle"
+                data-toggle="dropdown">
+                  <i class="fa fa-comments-o"></i>
+              </a>
+              <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                  <li role="presentation">
+                    <a href="#" class="message">
+                      <div class="details">
+                        <div class="sender">Jane Hew</div>
+                        <div class="text">
+                            Hey, John! How is it going? ...
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                        <div class="details">
+                          <div class="sender">Alies Rumiancaŭ</div>
+                          <div class="text">
+                              I'll definitely buy this template
+                          </div>
+                        </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                          <div class="details">
+                              <div class="sender">Michał Rumiancaŭ</div>
+                              <div class="text">
+                                  Is it really Lore ipsum? Lore ...
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="text-align-center see-all">
+                          See all messages <i class="fa fa-arrow-right"></i>
+                      </a>
+                  </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </header>
       <div class="loader-wrap hiding hide">

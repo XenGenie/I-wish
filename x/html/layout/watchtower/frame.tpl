@@ -9,6 +9,9 @@
     <!-- <link href="/x/html/layout/watchtower/css/shopfrog.css" rel="stylesheet" media="screen">    -->
     <!-- <link href="/x/html/layout/watchtower/shopfrog-grey.css" rel="stylesheet" media="screen"> -->
     <link rel="stylesheet" href="/bin/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="/bin/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="/bin/css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="/bin/css/bootstrap-theme.css"> -->
     <!-- <link rel="stylesheet" href="/bin/css/darkly.bootstrap.css"> -->
     <link rel="stylesheet" href="/bin/css/jetblack.bootstrap.css">
     <link href="/x/html/layout/watchtower/css/application.css" rel="stylesheet">
@@ -108,7 +111,7 @@
                 font-size: 200%;  
           }
           .bg-host{
-              font-size: 400%;
+              /* font-size: 400%; */
           }
       }
       @media screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) { 
@@ -125,7 +128,7 @@
                 font-size: 300%;  
           }
           .bg-host{
-              font-size: 333%;
+              /* font-size: 333%; */
           }
       }
 
@@ -212,6 +215,11 @@
     </div>
     <nav id="sidebar" class="sidebar nav-collapse collapse">
       <ul id="side-nav" class="side-nav">
+        <li class="visible-xs" >
+          <h3 class="name text-center">
+            {$HTTP_HOST}
+          </h3>
+        </li>
         <li class="active">
           <a href="/{$toBackDoor}"
             data-toggle="collapse"
@@ -219,7 +227,7 @@
           >
             <!-- <img src="/users/avatar" class="fa" height="16px" align="absmiddle" style="border-radius: 50px;" /> -->
             <style>
-            .fa-spin { -webkit-filter: blur(0); }
+              .fa-spin { -webkit-filter: blur(0); }
             </style>
             <i class="fa fa-dashboard"></i>
             <span class="name">
@@ -229,53 +237,50 @@
         </li>
         <!-- {counter start=0} -->
         {foreach $admin_menu as $key => $item}
-            {assign var=children value=0}
-
-            {foreach $xtras as $x => $xtra}
-                {if $xtra.icon && $key == $xtra.see && ($xtra.alpha == true || $xtra.beta == true || $xtra.delta == true || $xtra.omega == true)}
-                    {assign var=children value=1}
-                {/if}
-            {/foreach}
-
-
-            {if $key && $children > 0}  
-                <li class="panel">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse"
-                      data-parent="#side-nav" href="#{$key}-collapse" onclick="$($('.carousel-indicators li')[{counter}]).click()"><i class="fa fa-3x fa-{$key}"></i><span class="name">{$item.area|ucfirst}</span></a>
-                    <ul id="{$key}-collapse" class="panel-collapse collapse"> 
-                        {foreach $xtras as $x => $xtra}
-                            {if $xtra.icon && $key == $xtra.see}
-                                <!-- <img src="{$ICON.48}{$xtra.icon}" desc="{$xtra.desc}" link="{$xtra.link}" file="{$x}" icon="{$xtra.icon}" title="{$xtra.name}">  --> 
-                                {if $xtra.alpha || $xtra.beta || $xtra.delta || $xtra.omega}
-                                    <li> 
-                                        <a href="/x/{$xtra.link}" title="{$xtra.desc}"
-                                          data-placement="top" 
-                                          data-original-title="{$xtra.desc}"
-                                          data-toggle="collapse"
-                                          data-target=".sidebar"
-                                        > 
-                                        <i class="fa fa-2x fa-{$xtra.mini}"></i>
-                                        <span>{$xtra.name}</span>
-                                        </a>
-                                        <!-- {if $xtra.alpha}
-                                            <span class="label label-danger">&alpha;</span>
-                                        {/if}
-                                        {if $xtra.beta}
-                                            <span class="label label-warning">&beta;</span>
-                                        {/if}
-                                        {if $xtra.delta}
-                                            <span class="label label-success">&Delta;</span>
-                                        {/if}
-                                        {if $xtra.omega}
-                                            <span class="label label-primary">&Omega;</span>
-                                        {/if} -->
-                                    </li>
-                                {/if}
-                            {/if}
-                        {/foreach}
-                    </ul>
-                </li> 
-            {/if}
+          {assign var=children value=0}
+          {foreach $xtraz as $x => $xtra}
+              {if $xtra.icon && $key == $xtra.see && ($xtra.alpha == true || $xtra.beta == true || $xtra.delta == true || $xtra.omega == true)}
+                  {assign var=children value=1}
+              {/if}
+          {/foreach}
+          {if $key && $children > 0}
+            <li class="panel">
+              <a class="accordion-toggle collapsed" data-toggle="collapse"
+                data-parent="#side-nav" href="#{$key}-collapse" onclick="$($('.carousel-indicators li')[{counter}]).click()"><i class="fa fa-3x fa-{$key}"></i><span class="name">{$item.area|ucfirst}</span></a>
+              <ul id="{$key}-collapse" class="panel-collapse collapse"> 
+                  {foreach $xtraz as $x => $xtra}
+                      {if $xtra.icon && $key == $xtra.see}
+                          <!-- <img src="{$ICON.48}{$xtra.icon}" desc="{$xtra.desc}" link="{$xtra.link}" file="{$x}" icon="{$xtra.icon}" title="{$xtra.name}">  --> 
+                          {if $xtra.alpha || $xtra.beta || $xtra.delta || $xtra.omega}
+                              <li> 
+                                  <a href="/x/{$xtra.link}" title="{$xtra.desc}"
+                                    data-placement="top" 
+                                    data-original-title="{$xtra.desc}"
+                                    data-toggle="collapse"
+                                    data-target=".sidebar"
+                                  > 
+                                  <i class="fa fa-2x fa-{$xtra.mini}"></i>
+                                  <span>{$xtra.name}</span>
+                                  </a>
+                                  <!-- {if $xtra.alpha}
+                                      <span class="label label-danger">&alpha;</span>
+                                  {/if}
+                                  {if $xtra.beta}
+                                      <span class="label label-warning">&beta;</span>
+                                  {/if}
+                                  {if $xtra.delta}
+                                      <span class="label label-success">&Delta;</span>
+                                  {/if}
+                                  {if $xtra.omega}
+                                      <span class="label label-primary">&Omega;</span>
+                                  {/if} -->
+                              </li>
+                          {/if}
+                      {/if}
+                  {/foreach}
+              </ul>
+            </li> 
+          {/if}
         {/foreach}
         <!-- <li class="visible-xs"> -->
         <!--     <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
@@ -295,186 +300,233 @@
     <div class="wrap">
       <header class="page-header">
         <div class="navbar">
-          <ul class="nav navbar-nav navbar-right pull-left">
-              <li class="visible-xs">
-                <a href="#"
-                  class="btn-navbar"
-                  data-toggle="collapse"
-                  data-target=".sidebar"
-                  title="">
-                    <i class="fa fa-bars"></i>
-                </a>
-              </li>
-              <li class="visible-xs divider"></li>
-              <li class="dropdown">
-                  <a href="#" title="Account" id="account"
-                    class="dropdown-toggle"
-                    data-toggle="dropdown">
-                      <i class="fa fa-user"></i>
-                  </a>
-                  <ul id="account-menu" class="dropdown-menu account" role="menu">
-                      <li role="presentation" class="account-picture">
-                          <!-- <img src="/users/avatar" class="img-circle" alt=""> -->
-                          {$user.username}
-                      </li>
-                      <li role="presentation">
-                          <a href="form_account.html" class="link">
-                              <i class="fa fa-user"></i>
-                              Profile
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="component_calendar.html" class="link">
-                              <i class="fa fa-calendar"></i>
-                              Calendar
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="link">
-                              <i class="fa fa-inbox"></i>
-                              Inbox
-                          </a>
-                      </li>
-                  </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" title="Messages" id="messages"
+          <ul class="nav navbar-nav navbar-left pull-left">
+            <li class="visible-xs">
+              <a href="#"
+                class="btn-navbar"
+                data-toggle="collapse"
+                data-target=".sidebar"
+                title="">
+                  <i class="fa fa-bars"></i>
+              </a>
+            </li>
+            <li class="visible-xs divider"></li>
+            <li class="dropdown">
+                <a href="#" title="8 Notifications"
                   class="dropdown-toggle"
                   data-toggle="dropdown">
-                    <i class="fa fa-comments-o"></i>
+                    <i class="fa fa-bell-o"></i>
+                    <span class="count">8</span>
                 </a>
-                <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                <ul id="support-menu" class="dropdown-menu support" role="menu">
                     <li role="presentation">
-                        <a href="#" class="message">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="fa fa-bell-o"></i></span>
+                            </div>
                             <div class="details">
-                                <div class="sender">Jane Hew</div>
-                                <div class="text">
-                                    Hey, John! How is it going? ...
-                                </div>
+                                Check out this awesome ticket
                             </div>
                         </a>
                     </li>
                     <li role="presentation">
-                        <a href="#" class="message">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
+                            </div>
                             <div class="details">
-                                <div class="sender">Alies Rumiancaŭ</div>
-                                <div class="text">
-                                    I'll definitely buy this template
-                                </div>
+                                "What is the best way to get ...
                             </div>
                         </a>
                     </li>
                     <li role="presentation">
-                        <a href="#" class="message">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-success"><i class="fa fa-tag"></i></span>
+                            </div>
                             <div class="details">
-                                <div class="sender">Michał Rumiancaŭ</div>
-                                <div class="text">
-                                    Is it really Lore ipsum? Lore ...
-                                </div>
+                                This is just a simple notification
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-info"><i class="fa fa-info-circle"></i></span>
+                            </div>
+                            <div class="details">
+                                12 new orders has arrived today
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="fa fa-plus"></i></span>
+                            </div>
+                            <div class="details">
+                                One more thing that just happened
                             </div>
                         </a>
                     </li>
                     <li role="presentation">
                         <a href="#" class="text-align-center see-all">
-                            See all messages <i class="fa fa-arrow-right"></i>
+                            See all tickets <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                 </ul>
-              </li>
-              <li class="dropdown">
-                  <a href="#" title="8 Notifications"
-                    class="dropdown-toggle"
-                    data-toggle="dropdown">
-                      <i class="fa fa-exclamation"></i>
-                      <span class="count">8</span>
-                  </a>
-                  <ul id="support-menu" class="dropdown-menu support" role="menu">
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-important"><i class="fa fa-bell-o"></i></span>
-                              </div>
-                              <div class="details">
-                                  Check out this awesome ticket
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
-                              </div>
-                              <div class="details">
-                                  "What is the best way to get ...
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-success"><i class="fa fa-tag"></i></span>
-                              </div>
-                              <div class="details">
-                                  This is just a simple notification
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-info"><i class="fa fa-info-circle"></i></span>
-                              </div>
-                              <div class="details">
-                                  12 new orders has arrived today
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="support-ticket">
-                              <div class="picture">
-                                  <span class="label label-important"><i class="fa fa-plus"></i></span>
-                              </div>
-                              <div class="details">
-                                  One more thing that just happened
-                              </div>
-                          </a>
-                      </li>
-                      <li role="presentation">
-                          <a href="#" class="text-align-center see-all">
-                              See all tickets <i class="fa fa-arrow-right"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </li>
-              <li class="divider hidden-xs"></li>
-              <li class="hidden-xs">
-                <a href="#" id="settings"
-                  title="Settings"
-                  data-toggle="popover"
-                  data-placement="bottom">
-                    <i class="fa fa-sliders"></i>
-                </a>
-              </li>
-              <li ><a href="/{$toBackDoor}/login/logout"><i class="fa fa-power-off"></i></a></li>
-              <!-- <li class=" hidden-xs"> -->
-              <!--     <a href="/" data-widgster="fullscreen" title="Full Screen" > -->
-              <!--         <i class="fa fa-globe"></i> -->
-              <!--     </a> -->
-              <!-- </li> -->
-              <li class="visible-phone-landscape">
-                <a href="#" id="search-toggle">
-                  <i class="fa fa-search"></i>
-                </a>
-              </li>
+            </li>
           </ul>
-          <form id="search-form" class="navbar-form pull-right" role="search">
-              <input type="search" class="search-query" placeholder="What is your command...?">
-          </form>
-          <div class="logo text-center hidden-xs pull-right">
+          <div class="logo text-center hidden-xs pull-left">
             <h4  class="bg-host">
               {$HTTP_HOST}
             </h4>
           </div>
+          <ul class="nav navbar-nav navbar-left pull-left ">
+            <li class="hidden-xs">
+              <a href="#" id="settings"
+                title="Settings"
+                data-toggle="popover"
+                data-placement="bottom">
+                  <i class="fa fa-sliders"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right pull-right">
+            <li class="dropdown">
+              <a href="#" title="Account" id="account"
+                class="dropdown-toggle"
+                data-toggle="dropdown">
+                  <i class="fa fa-user"></i>
+              </a>
+              <ul id="account-menu" class="dropdown-menu account" role="menu">
+                <li role="presentation" class="account-picture">
+                    <!-- <img src="/users/avatar" class="img-circle" alt=""> -->
+                    <b>
+                      {$user.username}
+                    </b>
+                </li>
+                <li role="presentation">
+                    <a href="form_account.html" class="link">
+                        <i class="fa fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="component_calendar.html" class="link">
+                        <i class="fa fa-calendar"></i>
+                        Calendar
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#" class="link">
+                        <i class="fa fa-inbox"></i>
+                        Messages 
+                    </a>
+                </li>
+                <li ><a href="/{$toBackDoor}/login/logout"><i class="fa fa-power-off"></i> Log Out</a></li>
+              </ul>
+            </li>
+            <li class="dropdown visible-xs">
+              <a href="#" title="Messages" id="messages"
+                class="dropdown-toggle"
+                data-toggle="dropdown">
+                  <i class="fa fa-comments-o"></i>
+              </a>
+              <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                  <li role="presentation">
+                    <a href="#" class="message">
+                      <div class="details">
+                        <div class="sender">Jane Hew</div>
+                        <div class="text">
+                            Hey, John! How is it going? ...
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                        <div class="details">
+                          <div class="sender">Alies Rumiancaŭ</div>
+                          <div class="text">
+                              I'll definitely buy this template
+                          </div>
+                        </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                          <div class="details">
+                              <div class="sender">Michał Rumiancaŭ</div>
+                              <div class="text">
+                                  Is it really Lore ipsum? Lore ...
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="text-align-center see-all">
+                          See all messages <i class="fa fa-arrow-right"></i>
+                      </a>
+                  </li>
+              </ul>
+            </li>
+            <li class="visible-phone-landscape">
+              <a href="#" id="search-toggle">
+                <i class="fa fa-search"></i>
+              </a>
+            </li>
+            <!-- <li class="divider hidden-xs"></li> -->
+          </ul>
+          <form id="search-form" class="navbar-form pull-right" role="search">
+              <input type="search" class="search-query" placeholder="What is your command...?">
+          </form>
+          <ul class="nav navbar-nav navbar-right pull-right hidden-xs">
+            <li class="dropdown">
+              <a href="#" title="Messages" id="messages"
+                class="dropdown-toggle"
+                data-toggle="dropdown">
+                  <i class="fa fa-comments-o"></i>
+              </a>
+              <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                  <li role="presentation">
+                    <a href="#" class="message">
+                      <div class="details">
+                        <div class="sender">Jane Hew</div>
+                        <div class="text">
+                            Hey, John! How is it going? ...
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                        <div class="details">
+                          <div class="sender">Alies Rumiancaŭ</div>
+                          <div class="text">
+                              I'll definitely buy this template
+                          </div>
+                        </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="message">
+                          <div class="details">
+                              <div class="sender">Michał Rumiancaŭ</div>
+                              <div class="text">
+                                  Is it really Lore ipsum? Lore ...
+                              </div>
+                          </div>
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a href="#" class="text-align-center see-all">
+                          See all messages <i class="fa fa-arrow-right"></i>
+                      </a>
+                  </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </header>
       <div class="loader-wrap hiding hide">

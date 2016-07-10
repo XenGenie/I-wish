@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-08 03:48:46
+/* Smarty version 3.1.30-dev/72, created on 2016-07-09 07:40:30
   from "/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_577f067e308cc7_48513341',
+  'unifunc' => 'content_57808e4e903a42_41918868',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e8c605843656df9caa93b8fa592df6cf80693e86' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl',
-      1 => 1467628270,
+      1 => 1468042796,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~widgets/col.tpl' => 2,
   ),
 ),false)) {
-function content_577f067e308cc7_48513341 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57808e4e903a42_41918868 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
   <div class="col-md-<?php if ($_smarty_tpl->tpl_vars['size']->value) {
@@ -65,7 +65,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['b']->value => $_smarty_tpl->tpl_vars[
             <a
               class="btn btn-lg <?php echo $_smarty_tpl->tpl_vars['btn']->value['class'];?>
  <?php if ($_smarty_tpl->tpl_vars['method']->value == $_smarty_tpl->tpl_vars['b']->value) {?>active<?php }?> btn-xs-block"
-              <?php if (isset($_smarty_tpl->tpl_vars['btn']->value['modal']) && $_smarty_tpl->tpl_vars['btn']->value['modal'] == true) {?>
+              <?php if (isset($_smarty_tpl->tpl_vars['btn']->value['modal'])) {?>
                 data-toggle="modal" data-target="#modal-<?php echo $_smarty_tpl->tpl_vars['b']->value;?>
 "
               <?php } else { ?>
@@ -75,12 +75,14 @@ foreach ($_from as $_smarty_tpl->tpl_vars['b']->value => $_smarty_tpl->tpl_vars[
 "
               <?php }?>
               >
-                <?php echo $_smarty_tpl->tpl_vars['btn']->value['a'];?>
+              <?php echo $_smarty_tpl->tpl_vars['btn']->value['a'];?>
 
             </a>
-            <?php $_smarty_tpl->_subTemplateRender("file:~blox/modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('id'=>"modal-".((string)$_smarty_tpl->tpl_vars['b']->value),'ajax'=>((string)$_smarty_tpl->tpl_vars['Xtra']->value)."/".((string)$_smarty_tpl->tpl_vars['b']->value),'title'=>((string)$_smarty_tpl->tpl_vars['btn']->value['a'])), 0, true);
+            <?php if (isset($_smarty_tpl->tpl_vars['btn']->value['modal'])) {?>
+              <?php $_smarty_tpl->_subTemplateRender("file:~blox/modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('id'=>"modal-".((string)$_smarty_tpl->tpl_vars['b']->value),'ajax'=>((string)$_smarty_tpl->tpl_vars['Xtra']->value)."/".((string)$_smarty_tpl->tpl_vars['b']->value),'title'=>((string)$_smarty_tpl->tpl_vars['btn']->value['a']),'size'=>$_smarty_tpl->tpl_vars['btn']->value['modal'],'buttons'=>$_smarty_tpl->tpl_vars['btn']->value['buttons']), 0, true);
 ?>
 
+            <?php }?>
         <?php
 }
 }

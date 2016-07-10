@@ -22,15 +22,17 @@
         {foreach $LANG.$XTRA.JUMBO.BTN as $b => $btn}
             <a
               class="btn btn-lg {$btn.class} {if $method == $b}active{/if} btn-xs-block"
-              {if isset($btn.modal) && $btn.modal == true}
+              {if isset($btn.modal)}
                 data-toggle="modal" data-target="#modal-{$b}"
               {else}
                 href="/{$toBackDoor}/{$Xtra}/{$b}"
               {/if}
               >
-                {$btn.a}
+              {$btn.a}
             </a>
-            {include "~blox/modal.tpl" id="modal-{$b}" ajax="{$Xtra}/{$b}" title="{$btn.a}"}
+            {if isset($btn.modal)}
+              {include "~blox/modal.tpl" id="modal-{$b}" ajax="{$Xtra}/{$b}" title="{$btn.a}" size=$btn.modal buttons=$btn.buttons}
+            {/if}
         {/foreach}
       </div>
     </section>

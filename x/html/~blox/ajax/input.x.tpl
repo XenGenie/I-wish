@@ -15,34 +15,38 @@
       {/if}
       -->
       <div class="input-group col-sm-12">
-          <span class="input-group-btn hidden-xs" >
-              <a id="btn-{$_id}" class="btn btn-alt btn-success btn-block text-left" type="button" onclick="window.config.save(this,{ {$name} : $('#{$_id}').val() })">
-                  <i class="{$i.icon}" id="i-{$_id}"></i>
-                  {$txt} 
+          <span class="input-group-btn" >
+              <a 
+                id="btn-{$_id}" 
+                class="btn btn-alt btn-success btn-block text-left" 
+                type="button" onclick="window.config.save(this,{ {$name} : $('#{$_id}').val() })"
+              >
+                <i class="{$i.icon}" id="i-{$_id}"></i>
+                {$txt} 
               </a>
           </span>
           {if $i.type == 'radio'}
-          <div class="btn-group pull-right col-sm-12 no-margin no-padding" data-toggle="buttons">
+            <div class="btn-group pull-right col-sm-12 no-margin no-padding" data-toggle="buttons">
               {$cols = $i.labels|count|intval}
               {$cols = 12 / $cols}
-              {foreach $i.labels as $label => $l} 
+              {foreach $i.labels as $label => $l}
                 <label id="{$_id}" class="btn btn-transparent col-sm-{$cols} {if ${$name} == $l.value}active{/if}"  onclick="window.config.save(this,{ {$name} : '{$l.value}' })">
                     <input  name="{$name}" value="{$l.value}" type="radio" > {$l.txt}
                 </label> 
-              {/foreach} 
-          </div>
+              {/foreach}
+            </div>
           {else if $i.type == 'textarea'}
-            <textarea 
-                id           ="{$_id}"
-                data-trigger ="change" 
-                required     ="required"
-                class        ="form-control {$Xtra}"
-                name         ="{$name}" 
-                value        ="{if ${$Xtra}_{$name}}{${$Xtra}_{$name}}{else}{${$name}}{/if}" 
-                placeholder  ="{$txt}"
-                onblur       ="window.config.save(this,{ {$Xtra}_{$name} : this.value })" 
-                style        ="width: 100%"
-                placeholder  ="{$txt}"
+            <textarea
+              id           = "{$_id}"
+              data-trigger = "change"
+              required     = "required"
+              class        = "form-control {$Xtra}"
+              name         = "{$name}"
+              value        = "{if ${$Xtra}_{$name}}{${$Xtra}_{$name}}{else}{${$name}}{/if}"
+              placeholder  = "{$txt}"
+              onblur       = "window.config.save(this,{ {$Xtra}_{$name} : this.value })"
+              style        = "width: 100%"
+              placeholder  = "{$txt}"
             ></textarea>
           {else}
           <input id="{$_id}" type="{if !$i.type}text{else}{$i.type}{/if}"
@@ -56,12 +60,19 @@
                         {/if} 
                 >
           {/if}
-          <span {if $i.desc}class="input-group-btn popover-test"
-                            data-placement="top"
-          data-content="{$i.desc}" data-original-title="{$txt}"{/if}
-            class="input-group-btn" title="{$txt}"  style="width: 35px;">
+          <span 
+            {if $i.desc}
+              class="input-group-btn popover-test"
+              data-placement="left"
+              data-content="{$i.desc}" 
+              data-original-title="{$txt}"
+            {/if}
+              class="input-group-btn" 
+              title="{$txt}"  
+              style="width: 35px;"
+            >
               <a class="btn btn-alt btn-info " {if $i.href}href="{$i.href}" target="_blank" {/if} type="button"  style="width: 100%">
-                  <i class="fa fa-question"  ></i> 
+                <i class="fa fa-question"  ></i> 
               </a>
           </span>
       </div>

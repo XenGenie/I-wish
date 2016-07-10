@@ -3664,7 +3664,7 @@ select[multiple].input-lg,
   padding: 5px 12px;
   font-size: 13px;
   line-height: 1.428571429;
-  border-radius: 3px;
+  border-radius: 5px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5425,8 +5425,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 
 .breadcrumb {
-  padding: 5px 0 ;
-  margin: 12px 0 10px 0;
+  padding: 0 0 5px 0 ;
+  margin: 0px 0 10px 0;
   list-style: none;
   background-color: transparent;
   border-radius: 3px;
@@ -22134,7 +22134,7 @@ a.text-gray-lighter:focus {
 
 @media (min-height: 940px) {
   .logo {
-    position: fixed;
+    /* position: fixed; */
   }
 }
 
@@ -22152,14 +22152,14 @@ a.text-gray-lighter:focus {
 /**          SIDEBAR             **/
 /**********************************/
 .sidebar {
-  position: fixed;
-  width: 160px;
-  padding: 0;
-  top: 0;
-  color: #ffffff;
-  z-index: 1;
-  margin: 77px 0 0 25px;
-  font-weight: 300;
+  position    : fixed;
+  width       : 160px;
+  padding     : 0;
+  top         : 0;
+  color       : #ffffff;
+  z-index     : 1;
+  margin      : 60px 0 0 25px;
+  font-weight : 300;
 }
 
 @media (min-height: 940px) {
@@ -22438,7 +22438,7 @@ a.text-gray-lighter:focus {
 /**          WIDGET               **/
 /**********************************/
 .widget {
-  border-radius: 7px;
+  border-radius: 5px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -22598,7 +22598,7 @@ a.text-gray-lighter:focus {
 /**********************************/
 .page-header {
   border: none;
-  margin: 20px 15px 10px 15px ;
+  margin: 10px;
   padding: 0;
   position: relative;
   border-radius: 3px;
@@ -23816,7 +23816,7 @@ ol.text-list {
 @media (max-width: 480px) {
   .sidebar,
   .sidebar-on-right .sidebar {
-    margin: 90px 2.5641%;
+    margin: 40px 2.5641%;
     width: 94.8718%;
   }
   .form-condensed .controls {
