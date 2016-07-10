@@ -1,10 +1,11 @@
 # Ignore everything:
 *.hits
 */__cache/*
+x/_cfg/__cache/*
 x/html/themes/
 
 # Except for X:
-!bin/ 
+!bin/
 !x/
 !x/html/
 !x/.php
