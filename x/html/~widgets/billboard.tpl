@@ -1,9 +1,9 @@
+{$XTRA = "X{$Xtra|strtoupper}"}
 <div class="row">
   <div class="col-md-{if $size}{$size}{else}12{/if}"> 
     <section class="widget">
       <div class="jumbotron text-center">
         <h1>
-          {assign var=XTRA value="X{$Xtra|strtoupper}"}
           {if $method == 'index'}
             <!-- <i class="fa {$LANG.$XTRA.ICON} fa-3x pull-right"></i>  -->
             {$LANG.$XTRA.JUMBO.HEAD}

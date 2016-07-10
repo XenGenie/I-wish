@@ -14,18 +14,20 @@
         {$xtra.name} 
         </a> 
         {if $method == 'index'} 
-        </li>
+          </li>
         {else}
-            <li class="active btn btn-sm btn-transparent">
-                <a href="/{$toBackDoor}/{$Xtra}/{$method}" class=""><i class="fa fa-{$Xtra}-{$method}"> {$method|ucfirst}</i>
-            </a>
+          <!-- <li class="active btn btn-sm btn-transparent"> -->
+          <!--   <a href="/{$toBackDoor}/{$Xtra}/{$method}" class=""> -->
+          <!--     <i class="fa fa-{$Xtra}-{$method}"> {$method|ucfirst}</i> -->
+          <!--   </a> -->
+          <!-- </li> -->
         {/if}
-        <li class="label label-transparent hidden-xs">
-          <!-- <label class="badge  -->
-          <!--   badge{if $xtra.alpha}-danger{elseif $xtra.beta}-warning{elseif $xtra.delta}-success{elseif $xtra.omega}-primary{else}-transparent{/if}"> -->
-          <!--   {$xtra.version}  -->
-          <!-- </label> -->
-         {$xtra.desc} 
+        <li class="label label-transparent pull-right">
+          <label class="badge 
+            badge{if $xtra.alpha}-danger{elseif $xtra.beta}-warning{elseif $xtra.delta}-success{elseif $xtra.omega}-primary{else}-transparent{/if}">
+            {$xtra.version} 
+          </label>
+         {* {$xtra.desc}  *}
         </li>
       {/if}
   {/foreach}

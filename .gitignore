@@ -1,6 +1,7 @@
 # Ignore everything:
 *.hits
 */__cache/*
+x/html/themes/
 
 # Except for X:
 !bin/ 
