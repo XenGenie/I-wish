@@ -239,9 +239,9 @@
         {foreach $admin_menu as $key => $item}
           {assign var=children value=0}
           {foreach $xtraz as $x => $xtra}
-              {if $xtra.icon && $key == $xtra.see && ($xtra.alpha == true || $xtra.beta == true || $xtra.delta == true || $xtra.omega == true)}
-                  {assign var=children value=1}
-              {/if}
+            {if $xtra.icon && $key == $xtra.see && ($xtra.alpha == true || $xtra.beta == true || $xtra.delta == true || $xtra.omega == true)}
+                {assign var=children value=1}
+            {/if}
           {/foreach}
           {if $key && $children > 0}
             <li class="panel">

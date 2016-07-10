@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-10 10:52:24
+/* Smarty version 3.1.30-dev/72, created on 2016-07-11 00:12:32
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_57820cc8afbec5_81450352',
+  'unifunc' => 'content_5782c8508640d8_05131490',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b8737cd27925c070b3344105da355837d6ac8f77' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1468131676,
+      1 => 1468188346,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_57820cc8afbec5_81450352 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5782c8508640d8_05131490 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -322,10 +322,10 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['x']->value => $_smarty_tpl->tpl_vars['xtra']->value) {
 ?>
-              <?php if ($_smarty_tpl->tpl_vars['xtra']->value['icon'] && $_smarty_tpl->tpl_vars['key']->value == $_smarty_tpl->tpl_vars['xtra']->value['see'] && ($_smarty_tpl->tpl_vars['xtra']->value['alpha'] == true || $_smarty_tpl->tpl_vars['xtra']->value['beta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['delta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['omega'] == true)) {?>
-                  <?php $_smarty_tpl->_assignInScope('children', 1);
+            <?php if ($_smarty_tpl->tpl_vars['xtra']->value['icon'] && $_smarty_tpl->tpl_vars['key']->value == $_smarty_tpl->tpl_vars['xtra']->value['see'] && ($_smarty_tpl->tpl_vars['xtra']->value['alpha'] == true || $_smarty_tpl->tpl_vars['xtra']->value['beta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['delta'] == true || $_smarty_tpl->tpl_vars['xtra']->value['omega'] == true)) {?>
+                <?php $_smarty_tpl->_assignInScope('children', 1);
 ?>
-              <?php }?>
+            <?php }?>
           <?php
 }
 }
