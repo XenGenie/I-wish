@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-10 10:49:14
+/* Smarty version 3.1.30-dev/72, created on 2016-07-11 04:27:03
   from "/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_57820c0a2fa129_03819780',
+  'unifunc' => 'content_578303f74e01a7_01109514',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '57ff977a7c7a100a8653829e6bd46ed586cebf28' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl',
-      1 => 1468137547,
+      1 => 1468203975,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~widgets/col.tpl' => 2,
   ),
 ),false)) {
-function content_57820c0a2fa129_03819780 (Smarty_Internal_Template $_smarty_tpl) {
+function content_578303f74e01a7_01109514 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo strtoupper($_smarty_tpl->tpl_vars['Xtra']->value);
-$_prefixVariable4=ob_get_clean();
-$_smarty_tpl->_assignInScope('XTRA', "X".$_prefixVariable4);
+$_prefixVariable1=ob_get_clean();
+$_smarty_tpl->_assignInScope('XTRA', "X".$_prefixVariable1);
 ?>
 <div class="row">
   <div class="col-md-<?php if ($_smarty_tpl->tpl_vars['size']->value) {
@@ -99,8 +99,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['q']->value => $_smarty_tpl->tpl_vars[
 ?> 
     <?php ob_start();
 echo ucfirst($_smarty_tpl->tpl_vars['Xtra']->value);
-$_prefixVariable5=ob_get_clean();
-if ($_smarty_tpl->tpl_vars['q']->value == "x".$_prefixVariable5) {?>
+$_prefixVariable2=ob_get_clean();
+if ($_smarty_tpl->tpl_vars['q']->value == "x".$_prefixVariable2) {?>
       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['blox']->value, 'x', false, 'b');
 if ($_from !== null) {

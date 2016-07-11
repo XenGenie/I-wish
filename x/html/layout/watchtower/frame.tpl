@@ -42,22 +42,16 @@
       @media all {
         /* all devices */
         .background-clock {
-          color              : rgba(0,0,0,0.15);
-          position           : fixed;
-          font-size          : 500%;
+          color              : rgba(0,0,0,0.25);
+          text-align: center;
+          /* position           : fixed; */
+          font-size          : 30px;
           z-index            : -1;
-          bottom: 15px; 
-          right: 25px;
           -webkit-transition : all .4s ease-in-out;
           transition         : all .4s ease-in-out;
+          display: hidden;
         }
         .zo {
-          position: absolute;
-          /* color: rgba(0,0,0,.15); */
-          /* top: -23px; */
-          left: -65px;
-          /* font-size: 150%; */
-
         }
         .bg-host{
           display: inline;
@@ -202,19 +196,23 @@
   <body class="background-dark">
     <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"> -->
     <!-- </iframe>  -->
-    <small class="label tile label-sm widget hidden-xs hidden-sm " style="position: fixed; bottom: 0; left: 0; width: 120px;
-        margin: 23px 35px 23px 23px;">
-      super powered by
-      <br/>
-      <a href="http://superdomx.com/" target="_blank">
-        <img src="{$thumb}src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
-      </a>
-    </small>
-    <div class="background-clock" >
-        {include file="../../~blox/clock.tpl"}
-    </div>
     <nav id="sidebar" class="sidebar nav-collapse collapse">
       <ul id="side-nav" class="side-nav">
+        <li>
+          <small class="label tile label-sm widget hidden-xs hidden-sm "
+              data-original-title="Super Powered by" style="width: 100%; padding: 0px 0 0 0 ; margin-bottom: 10px; "
+            >
+            <!-- super powered by -->
+            <!-- <br/> -->
+            <a href="http://superdomx.com/" target="_blank">
+              <img src="{$thumb}src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
+              <!-- <span class="badge badge-xs badge-default"> -->
+              <!--   {$version} -->
+              <!-- </span> -->
+            </a>
+          </small>
+          <!-- <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
+        </li>
         <li class="visible-xs" >
           <h3 class="name text-center">
             {$HTTP_HOST}
@@ -282,9 +280,6 @@
             </li> 
           {/if}
         {/foreach}
-        <!-- <li class="visible-xs"> -->
-        <!--     <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
-        <!-- </li> -->
       </ul>
       <!-- <div id="sidebar-settings" class="settings"> -->
       <!--     <button type="button" -->
@@ -299,7 +294,7 @@
     </nav>
     <div class="wrap">
       <header class="page-header">
-        <div class="navbar">
+        <div class="navbar text-center">
           <ul class="nav navbar-nav navbar-left pull-left">
             <li class="visible-xs">
               <a href="#"
@@ -311,12 +306,12 @@
               </a>
             </li>
             <li class="visible-xs divider"></li>
-            <li class="dropdown">
+            <li class="dropdown" data-original-title="Notifications">
                 <a href="#" title="8 Notifications"
                   class="dropdown-toggle"
                   data-toggle="dropdown">
                     <i class="fa fa-bell-o"></i>
-                    <span class="count">8</span>
+                    <span class="count badge badge-danger">8</span>
                 </a>
                 <ul id="support-menu" class="dropdown-menu support" role="menu">
                     <li role="presentation">
@@ -392,6 +387,7 @@
               </a>
             </li>
           </ul>
+
           <ul class="nav navbar-nav navbar-right pull-right">
             <li class="dropdown">
               <a href="#" title="Account" id="account"
@@ -527,6 +523,10 @@
               </ul>
             </li>
           </ul>
+
+          <div class="background-clock hidden" >
+              {include file="../../~blox/clock.tpl"}
+          </div>
         </div>
       </header>
       <div class="loader-wrap hiding hide">

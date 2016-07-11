@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-10 23:45:15
+/* Smarty version 3.1.30-dev/72, created on 2016-07-11 04:25:44
   from "/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_5782c1ebc4ebb4_40526483',
+  'unifunc' => 'content_578303a8520e19_39534014',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '203b86e6b92ab0097016e81533d9a4ff786e38f3' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl',
-      1 => 1468137547,
+      1 => 1468203918,
       2 => 'file',
     ),
   ),
@@ -22,16 +22,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~widgets/col.tpl' => 2,
   ),
 ),false)) {
-function content_5782c1ebc4ebb4_40526483 (Smarty_Internal_Template $_smarty_tpl) {
+function content_578303a8520e19_39534014 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo strtoupper($_smarty_tpl->tpl_vars['Xtra']->value);
-$_prefixVariable4=ob_get_clean();
-$_smarty_tpl->_assignInScope('XTRA', "X".$_prefixVariable4);
+$_prefixVariable1=ob_get_clean();
+$_smarty_tpl->_assignInScope('XTRA', "X".$_prefixVariable1);
 ?>
 <div class="row">
   <div class="col-md-<?php if ($_smarty_tpl->tpl_vars['size']->value) {
 echo $_smarty_tpl->tpl_vars['size']->value;
-} else { ?>12<?php }?>"> 
+} else { ?>6<?php }?>"> 
     <section class="widget">
       <div class="jumbotron text-center">
         <h1>
@@ -99,8 +99,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['q']->value => $_smarty_tpl->tpl_vars[
 ?> 
     <?php ob_start();
 echo ucfirst($_smarty_tpl->tpl_vars['Xtra']->value);
-$_prefixVariable5=ob_get_clean();
-if ($_smarty_tpl->tpl_vars['q']->value == "x".$_prefixVariable5) {?>
+$_prefixVariable2=ob_get_clean();
+if ($_smarty_tpl->tpl_vars['q']->value == "x".$_prefixVariable2) {?>
       <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['blox']->value, 'x', false, 'b');
 if ($_from !== null) {

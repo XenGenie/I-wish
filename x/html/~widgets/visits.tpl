@@ -39,5 +39,5 @@
             </div>
         </div> -->
     </div>
-    {include file='~widgets/analytics/graph.visits.js' assign=$HTML.BODY.SCRIPT}
+    <script src="/x/html/~widgets/analytics/graph.visits.js"></script>
 </section>

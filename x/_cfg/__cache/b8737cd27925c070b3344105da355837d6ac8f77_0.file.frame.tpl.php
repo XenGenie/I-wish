@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-11 00:12:32
+/* Smarty version 3.1.30-dev/72, created on 2016-07-11 04:40:33
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_5782c8508640d8_05131490',
+  'unifunc' => 'content_57830721217c60_88999647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b8737cd27925c070b3344105da355837d6ac8f77' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1468188346,
+      1 => 1468204831,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_5782c8508640d8_05131490 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57830721217c60_88999647 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -86,22 +86,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
       @media all {
         /* all devices */
         .background-clock {
-          color              : rgba(0,0,0,0.15);
-          position           : fixed;
-          font-size          : 500%;
+          color              : rgba(0,0,0,0.25);
+          text-align: center;
+          /* position           : fixed; */
+          font-size          : 30px;
           z-index            : -1;
-          bottom: 15px; 
-          right: 25px;
           -webkit-transition : all .4s ease-in-out;
           transition         : all .4s ease-in-out;
+          display: hidden;
         }
         .zo {
-          position: absolute;
-          /* color: rgba(0,0,0,.15); */
-          /* top: -23px; */
-          left: -65px;
-          /* font-size: 150%; */
-
         }
         .bg-host{
           display: inline;
@@ -270,22 +264,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
   <body class="background-dark">
     <!-- <iframe src="/x/html/layout/clouds/index.html" width="100%" height="100%" style="position: fixed; top: 0; border: 0; left: 0;"> -->
     <!-- </iframe>  -->
-    <small class="label tile label-sm widget hidden-xs hidden-sm " style="position: fixed; bottom: 0; left: 0; width: 120px;
-        margin: 23px 35px 23px 23px;">
-      super powered by
-      <br/>
-      <a href="http://superdomx.com/" target="_blank">
-        <img src="<?php echo $_smarty_tpl->tpl_vars['thumb']->value;?>
-src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
-      </a>
-    </small>
-    <div class="background-clock" >
-        <?php $_smarty_tpl->_subTemplateRender("file:../../~blox/clock.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-    </div>
     <nav id="sidebar" class="sidebar nav-collapse collapse">
       <ul id="side-nav" class="side-nav">
+        <li>
+          <small class="label tile label-sm widget hidden-xs hidden-sm "
+              data-original-title="Super Powered by" style="width: 100%; padding: 0px 0 0 0 ; margin-bottom: 10px; "
+            >
+            <!-- super powered by -->
+            <!-- <br/> -->
+            <a href="http://superdomx.com/" target="_blank">
+              <img src="<?php echo $_smarty_tpl->tpl_vars['thumb']->value;?>
+src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
+              <!-- <span class="badge badge-xs badge-default"> -->
+              <!--   <?php echo $_smarty_tpl->tpl_vars['version']->value;?>
+ -->
+              <!-- </span> -->
+            </a>
+          </small>
+          <!-- <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
+        </li>
         <li class="visible-xs" >
           <h3 class="name text-center">
             <?php echo $_smarty_tpl->tpl_vars['HTTP_HOST']->value;?>
@@ -402,9 +399,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-        <!-- <li class="visible-xs"> -->
-        <!--     <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
-        <!-- </li> -->
       </ul>
       <!-- <div id="sidebar-settings" class="settings"> -->
       <!--     <button type="button" -->
@@ -419,7 +413,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     </nav>
     <div class="wrap">
       <header class="page-header">
-        <div class="navbar">
+        <div class="navbar text-center">
           <ul class="nav navbar-nav navbar-left pull-left">
             <li class="visible-xs">
               <a href="#"
@@ -431,12 +425,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
               </a>
             </li>
             <li class="visible-xs divider"></li>
-            <li class="dropdown">
+            <li class="dropdown" data-original-title="Notifications">
                 <a href="#" title="8 Notifications"
                   class="dropdown-toggle"
                   data-toggle="dropdown">
                     <i class="fa fa-bell-o"></i>
-                    <span class="count">8</span>
+                    <span class="count badge badge-danger">8</span>
                 </a>
                 <ul id="support-menu" class="dropdown-menu support" role="menu">
                     <li role="presentation">
@@ -513,6 +507,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
               </a>
             </li>
           </ul>
+
           <ul class="nav navbar-nav navbar-right pull-right">
             <li class="dropdown">
               <a href="#" title="Account" id="account"
@@ -650,6 +645,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
               </ul>
             </li>
           </ul>
+
+          <div class="background-clock hidden" >
+              <?php $_smarty_tpl->_subTemplateRender("file:../../~blox/clock.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+          </div>
         </div>
       </header>
       <div class="loader-wrap hiding hide">
