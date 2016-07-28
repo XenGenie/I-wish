@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-11 04:40:33
+/* Smarty version 3.1.30-dev/72, created on 2016-07-11 06:02:58
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_57830721217c60_88999647',
+  'unifunc' => 'content_57831a72eca1e3_44390187',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b8737cd27925c070b3344105da355837d6ac8f77' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/frame.tpl',
-      1 => 1468204831,
+      1 => 1468209549,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../".((string)$_smarty_tpl->tpl_vars[\'Door\']->value)."/portal.tpl' => 1,
   ),
 ),false)) {
-function content_57830721217c60_88999647 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57831a72eca1e3_44390187 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_counter')) require_once '/home/xopher/www/superdomx.com/x/Hydrogen/smarty/libs/plugins/function.counter.php';
 ?>
 <!DOCTYPE html>
@@ -267,7 +267,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
     <nav id="sidebar" class="sidebar nav-collapse collapse">
       <ul id="side-nav" class="side-nav">
         <li>
-          <small class="label tile label-sm widget hidden-xs hidden-sm "
+          <small class="label tile label-sm widget "
               data-original-title="Super Powered by" style="width: 100%; padding: 0px 0 0 0 ; margin-bottom: 10px; "
             >
             <!-- super powered by -->
@@ -284,7 +284,7 @@ src=/bin/images/logos/sdx.png&w=150" style="max-width: 100%"/>
           <!-- <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
         </li>
         <li class="visible-xs" >
-          <h3 class="name text-center">
+          <h3 class="text-center">
             <?php echo $_smarty_tpl->tpl_vars['HTTP_HOST']->value;?>
 
           </h3>

@@ -199,7 +199,7 @@
     <nav id="sidebar" class="sidebar nav-collapse collapse">
       <ul id="side-nav" class="side-nav">
         <li>
-          <small class="label tile label-sm widget hidden-xs hidden-sm "
+          <small class="label tile label-sm widget "
               data-original-title="Super Powered by" style="width: 100%; padding: 0px 0 0 0 ; margin-bottom: 10px; "
             >
             <!-- super powered by -->
@@ -214,7 +214,7 @@
           <!-- <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a> -->
         </li>
         <li class="visible-xs" >
-          <h3 class="name text-center">
+          <h3 class="text-center">
             {$HTTP_HOST}
           </h3>
         </li>

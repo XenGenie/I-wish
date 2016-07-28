@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-10 21:10:48
+/* Smarty version 3.1.30-dev/72, created on 2016-07-11 06:12:10
   from "/home/xopher/www/superdomx.com/x/html/layout/watchtower/scripts.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_57829db8433513_88693984',
+  'unifunc' => 'content_57831c9a284a31_62836670',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9259b2a08771ef4146713fcf5db5f5cad9267bef' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/layout/watchtower/scripts.html',
-      1 => 1467953468,
+      1 => 1468206845,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~blox/ajax/save.x.tpl' => 1,
   ),
 ),false)) {
-function content_57829db8433513_88693984 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57831c9a284a31_62836670 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
       <?php echo '<script'; ?>
  type="text/template" id="message-template">
@@ -701,5 +701,8 @@ $_smarty_tpl->assign('SCRIPT', ob_get_clean());
  type="text/javascript" src="/x/html/layout/watchtower/lib/jquery.nestable.js"> <?php echo '</script'; ?>
 >
 
+      <?php echo '<script'; ?>
+ src="/x/html/layout/watchtower/js/index.js"><?php echo '</script'; ?>
+>
 <?php }
 }

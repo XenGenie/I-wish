@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30-dev/72, created on 2016-07-11 04:25:44
+/* Smarty version 3.1.30-dev/72, created on 2016-07-11 06:24:55
   from "/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30-dev/72',
-  'unifunc' => 'content_578303a8520e19_39534014',
+  'unifunc' => 'content_57831f97b37250_16119169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '203b86e6b92ab0097016e81533d9a4ff786e38f3' => 
     array (
       0 => '/home/xopher/www/superdomx.com/x/html/~widgets/billboard.tpl',
-      1 => 1468203918,
+      1 => 1468210854,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:~widgets/col.tpl' => 2,
   ),
 ),false)) {
-function content_578303a8520e19_39534014 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57831f97b37250_16119169 (Smarty_Internal_Template $_smarty_tpl) {
 ob_start();
 echo strtoupper($_smarty_tpl->tpl_vars['Xtra']->value);
 $_prefixVariable1=ob_get_clean();
@@ -31,7 +31,7 @@ $_smarty_tpl->_assignInScope('XTRA', "X".$_prefixVariable1);
 <div class="row">
   <div class="col-md-<?php if ($_smarty_tpl->tpl_vars['size']->value) {
 echo $_smarty_tpl->tpl_vars['size']->value;
-} else { ?>6<?php }?>"> 
+} else { ?>10<?php }?>"> 
     <section class="widget">
       <div class="jumbotron text-center">
         <h1>
@@ -56,13 +56,17 @@ echo $_smarty_tpl->tpl_vars['size']->value;
 
           <?php }?> 
         </p>
+      </div>
+    </section>
+  </div>
+  <div class="col-md-2">
         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['LANG']->value[$_smarty_tpl->tpl_vars['XTRA']->value]['JUMBO']['BTN'], 'btn', false, 'b');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['b']->value => $_smarty_tpl->tpl_vars['btn']->value) {
 ?>
             <a
-              class="btn btn-lg <?php echo $_smarty_tpl->tpl_vars['btn']->value['class'];?>
+              class="btn btn-lg btn-block <?php echo $_smarty_tpl->tpl_vars['btn']->value['class'];?>
  <?php if ($_smarty_tpl->tpl_vars['method']->value == $_smarty_tpl->tpl_vars['b']->value) {?>active<?php }?> btn-xs-block"
               <?php if (isset($_smarty_tpl->tpl_vars['btn']->value['modal'])) {?>
                 data-toggle="modal" data-target="#modal-<?php echo $_smarty_tpl->tpl_vars['b']->value;?>
@@ -88,8 +92,6 @@ foreach ($_from as $_smarty_tpl->tpl_vars['b']->value => $_smarty_tpl->tpl_vars[
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 ?>
 
-      </div>
-    </section>
   </div>
 
   <?php

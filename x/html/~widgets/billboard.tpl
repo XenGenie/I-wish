@@ -1,6 +1,6 @@
 {$XTRA = "X{$Xtra|strtoupper}"}
 <div class="row">
-  <div class="col-md-{if $size}{$size}{else}12{/if}"> 
+  <div class="col-md-{if $size}{$size}{else}10{/if}"> 
     <section class="widget">
       <div class="jumbotron text-center">
         <h1>
@@ -19,9 +19,13 @@
             {$LANG.$XTRA.$method.JUMBO.QUOTE}
           {/if} 
         </p>
+      </div>
+    </section>
+  </div>
+  <div class="col-md-2">
         {foreach $LANG.$XTRA.JUMBO.BTN as $b => $btn}
             <a
-              class="btn btn-lg {$btn.class} {if $method == $b}active{/if} btn-xs-block"
+              class="btn btn-lg btn-block {$btn.class} {if $method == $b}active{/if} btn-xs-block"
               {if isset($btn.modal)}
                 data-toggle="modal" data-target="#modal-{$b}"
               {else}
@@ -34,8 +38,6 @@
               {include "~blox/modal.tpl" id="modal-{$b}" ajax="{$Xtra}/{$b}" title="{$btn.a}" size=$btn.modal buttons=$btn.buttons}
             {/if}
         {/foreach}
-      </div>
-    </section>
   </div>
 
   {foreach $qBlox as $q => $blox} 
