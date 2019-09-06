@@ -23,8 +23,8 @@
   path = x/Emerald
   url = https://github.com/XenGenie/Emerald
 [submodule "x/X"]
-  path = x/X
-  url = https://github.com/XenGenie/X
+	path = x/X
+	url = https://github.com/XenGenie/X
 [submodule "x/html/twilli_air"]
   path = x/html/twilli_air
   url = git@bitbucket.org:xopherdeep/twilli_air.git
